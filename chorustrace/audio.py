@@ -18,6 +18,7 @@ class FeatureConfig:
     fft_size: int = 512
     n_mels: int = 40
     min_hz: float = 50.0
+    stereo_features: bool = False
 
     def __post_init__(self):
         sizes = (self.sample_rate, self.window_size, self.hop_size, self.fft_size, self.n_mels)
@@ -27,14 +28,20 @@ class FeatureConfig:
             raise ValueError("require 3 <= window size <= FFT size and hop size <= window size")
         if not isinstance(self.min_hz, Real) or not 0 <= self.min_hz < self.sample_rate / 2:
             raise ValueError("minimum frequency must be between zero and Nyquist")
+        if not isinstance(self.stereo_features, bool):
+            raise ValueError("stereo_features must be a boolean")
+
+    @property
+    def feature_count(self) -> int:
+        return self.n_mels * (2 if self.stereo_features else 1)
 
 
 def _positive_integer(value):
     return isinstance(value, Integral) and not isinstance(value, bool) and value > 0
 
 
-def read_wav(path):
-    """Read integer PCM as mono float64 samples in [-1, 1)."""
+def read_wav(path, *, preserve_channels=False):
+    """Read float64 PCM in [-1, 1), optionally preserving stereo channels."""
     try:
         with wave.open(os.fspath(path), "rb") as wav:
             channels = wav.getnchannels()
@@ -59,7 +66,9 @@ def read_wav(path):
     else:
         integers = np.frombuffer(data, dtype=f"<i{width}")
 
-    samples = integers.reshape(-1, channels).mean(axis=1, dtype=np.float64)
+    samples = integers.reshape(-1, channels)
+    if not (preserve_channels and channels == 2):
+        samples = samples.mean(axis=1, dtype=np.float64)
     return samples / (1 << (8 * width - 1)), sample_rate
 
 
@@ -118,13 +127,30 @@ _DEFAULT_FEATURES = FeatureConfig()
 
 
 def log_mel(samples, sample_rate, config=_DEFAULT_FEATURES):
-    """Return time-major natural-log mel powers for a mono waveform."""
+    """Return time-major log mel powers and optional stereo side-to-mid ratios."""
     samples = np.asarray(samples, dtype=np.float64)
-    if samples.ndim != 1 or not samples.size or not np.isfinite(samples).all():
-        raise ValueError("expected nonempty, finite mono audio")
+    stereo = config.stereo_features and samples.ndim == 2 and samples.shape[1] == 2
+    if (samples.ndim != 1 and not stereo) or not samples.size or not np.isfinite(samples).all():
+        expected_channels = "mono or stereo" if config.stereo_features else "mono"
+        raise ValueError(f"expected nonempty, finite {expected_channels} audio")
     if not _positive_integer(sample_rate):
         raise ValueError("sample rate must be a positive integer")
-    samples = _resample(samples, int(sample_rate), config.sample_rate)
+    sample_rate = int(sample_rate)
+    mid_samples = (samples[:, 0] + samples[:, 1]) * 0.5 if stereo else samples
+    mid = _mono_log_mel(mid_samples, sample_rate, config)
+    if not config.stereo_features:
+        return mid
+    if stereo:
+        side_samples = (samples[:, 0] - samples[:, 1]) * 0.5
+        side = _mono_log_mel(side_samples, sample_rate, config)
+        ratio = np.clip(side - mid, -6.0, 6.0)
+    else:
+        ratio = np.zeros_like(mid)
+    return np.concatenate((mid, ratio), axis=1)
+
+
+def _mono_log_mel(samples, sample_rate, config):
+    samples = _resample(samples, sample_rate, config.sample_rate)
 
     remaining = max(0, len(samples) - config.window_size)
     frame_count = 1 + (remaining + config.hop_size - 1) // config.hop_size
@@ -139,5 +165,5 @@ def log_mel(samples, sample_rate, config=_DEFAULT_FEATURES):
 
 def features_from_wav(path, config=_DEFAULT_FEATURES):
     """Read a PCM clip and extract time-major log-mel features."""
-    samples, sample_rate = read_wav(path)
+    samples, sample_rate = read_wav(path, preserve_channels=config.stereo_features)
     return log_mel(samples, sample_rate, config)

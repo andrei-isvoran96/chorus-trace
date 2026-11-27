@@ -37,11 +37,29 @@ class WavTests(unittest.TestCase):
     def test_stereo_downmix_and_partial_frame(self):
         with TemporaryDirectory() as directory:
             path = Path(directory) / "stereo.wav"
-            write_wav(path, [[0.75, -0.75], [0.5, 0.25], [-1.0, -1.0]], 8000)
+            stereo = [[0.75, -0.75], [0.5, 0.25], [-1.0, -1.0]]
+            write_wav(path, stereo, 8000)
             samples, rate = read_wav(path)
             self.assertEqual(rate, 8000)
             np.testing.assert_array_equal(samples, [0.0, 0.375, -1.0])
+            preserved, preserved_rate = read_wav(path, preserve_channels=True)
+            self.assertEqual(preserved_rate, rate)
+            np.testing.assert_array_equal(preserved, stereo)
             self.assertEqual(features_from_wav(path).shape, (1, 40))
+
+    def test_preserve_channels_leaves_mono_and_multichannel_as_mono(self):
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "source.wav"
+            config = FeatureConfig(stereo_features=True)
+            for sample_data in ([0.0, 0.25, -0.5], [[0.25, 0.5, 0.75], [0.5, -0.25, -0.25]]):
+                with self.subTest(samples=sample_data):
+                    write_wav(path, sample_data, 16000)
+                    default, _ = read_wav(path)
+                    preserved, _ = read_wav(path, preserve_channels=True)
+                    np.testing.assert_array_equal(preserved, default)
+                    features = features_from_wav(path, config)
+                    np.testing.assert_array_equal(features[:, :config.n_mels], features_from_wav(path))
+                    np.testing.assert_array_equal(features[:, config.n_mels:], 0)
 
     def test_rejects_truncated_pcm(self):
         with TemporaryDirectory() as directory:
@@ -68,6 +86,25 @@ class LogMelTests(unittest.TestCase):
     def test_silence_has_finite_log_floor(self):
         features = log_mel([0.0], 16000)
         np.testing.assert_allclose(features, np.log(1e-10))
+
+    def test_stereo_log_mel_distinguishes_centered_from_side_energy(self):
+        tone = 0.5 * self.tone(700)
+        config = FeatureConfig(stereo_features=True)
+        mono = log_mel(tone, 16000)
+        center = np.column_stack((tone, tone))
+        anti_phase = np.column_stack((tone, -tone))
+        center_features = log_mel(center, 16000, config)
+        side_features = log_mel(anti_phase, 16000, config)
+        dominant_band = mono.mean(axis=0).argmax()
+        self.assertEqual(FeatureConfig().feature_count, 40)
+        self.assertEqual(config.feature_count, 80)
+        self.assertEqual(center_features.shape, (len(mono), config.feature_count))
+        np.testing.assert_array_equal(center_features[:, :config.n_mels], mono)
+        np.testing.assert_array_equal(side_features[:, :config.n_mels], log_mel(np.zeros_like(tone), 16000))
+        np.testing.assert_array_equal(center_features[:, config.n_mels + dominant_band], -6.0)
+        np.testing.assert_array_equal(side_features[:, config.n_mels + dominant_band], 6.0)
+        silent = log_mel(np.zeros_like(center), 16000, config)
+        np.testing.assert_array_equal(silent[:, config.n_mels:], 0)
 
     def test_downsampling_suppresses_frequencies_above_target_nyquist(self):
         in_band = log_mel(self.tone(3000, 48000), 48000)

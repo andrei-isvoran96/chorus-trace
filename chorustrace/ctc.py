@@ -35,11 +35,25 @@ def log_softmax(logits: np.ndarray) -> np.ndarray:
     return shifted - np.log(np.exp(shifted).sum(axis=1, keepdims=True))
 
 
-def ctc_loss(logits: np.ndarray, targets, blank: int = 0) -> tuple[float, np.ndarray]:
-    """Return negative log likelihood and its gradient with respect to logits."""
+def ctc_loss(
+    logits: np.ndarray, targets, blank: int = 0, *,
+    log_prior_offset: np.ndarray | None = None,
+    frame_probability_sum: np.ndarray | None = None,
+) -> tuple[float, np.ndarray]:
+    """Return CTC loss and its gradient with respect to logits.
+
+    A fixed per-class log prior offset changes path weights. An optional
+    accumulator receives the sum of raw softmax probabilities across frames.
+    """
     log_probs = log_softmax(logits)
     frames, classes = log_probs.shape
     _check_blank(blank, classes)
+    if log_prior_offset is not None:
+        log_prior_offset = np.asarray(log_prior_offset, dtype=np.float64)
+        if log_prior_offset.shape != (classes,) or not np.isfinite(log_prior_offset).all():
+            raise ValueError("log prior offset must have one finite value per class")
+    if frame_probability_sum is not None and frame_probability_sum.shape != (classes,):
+        raise ValueError("frame probability accumulator must have one value per class")
     ids = _target_ids(targets)
     if np.any((ids < 0) | (ids >= classes) | (ids == blank)):
         raise ValueError("target IDs must index non-blank score columns")
@@ -53,6 +67,8 @@ def ctc_loss(logits: np.ndarray, targets, blank: int = 0) -> tuple[float, np.nda
     labels[1::2] = ids
     skip_to = (labels[2:] != blank) & (labels[2:] != labels[:-2])
     emissions = log_probs[:, labels]
+    if log_prior_offset is not None:
+        emissions -= log_prior_offset[labels]
     end_states = min(2, labels.size)
 
     # Alpha includes this frame's emission. A skip jumps over the blank only
@@ -84,7 +100,10 @@ def ctc_loss(logits: np.ndarray, targets, blank: int = 0) -> tuple[float, np.nda
     # Collect alternative alignment states that emit the same class.
     posterior = np.zeros_like(log_probs)
     np.add.at(posterior.T, labels, np.exp(alpha + beta - log_likelihood).T)
-    return -log_likelihood, np.exp(log_probs) - posterior
+    probabilities = np.exp(log_probs)
+    if frame_probability_sum is not None:
+        frame_probability_sum += probabilities.sum(axis=0)
+    return -log_likelihood, probabilities - posterior
 
 
 def greedy_decode(scores: np.ndarray, blank: int = 0) -> list[int]:

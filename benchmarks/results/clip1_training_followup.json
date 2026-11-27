@@ -1,0 +1,1417 @@
+{
+  "scope": "validation-only model selection with the original frozen test lock",
+  "test_lock_sha256": "9fa1241d905db1d31b1f1695303bb1cecb8c59f1ed1d93aad15cb1fb62ec22c2",
+  "development_manifest_sha256": "cc12c4e63c0941a4d5d5e3444b3f45c6d907348372d8b737a8e36b2507a8277f",
+  "checkpoint": "benchmarks/checkpoints/clip1-best.npz",
+  "checkpoint_sha256": "6c520f8df70407fed65e01506c3bc05e519e966b17775485c3cec5823e834ff3",
+  "incumbent_candidate": "runs/clip1-acoustic-v2/selected.npz",
+  "selected": {
+    "candidate": "selected.npz",
+    "beam_width": 1,
+    "blank_logit_offset": 0.0,
+    "reference_words": 2418,
+    "reference_characters": 11556,
+    "substitutions": 456,
+    "deletions": 1874,
+    "insertions": 0,
+    "word_edits": 2330,
+    "character_edits": 10920,
+    "tracks": 347,
+    "wer": 0.9636062861869313,
+    "cer": 0.944963655244029,
+    "emitted_words": 544,
+    "instrumental": {
+      "intervals": 14,
+      "intervals_with_words": 0,
+      "seconds": 65.10952380700004,
+      "words": 0,
+      "interval_false_alarm_rate": 0.0,
+      "words_per_minute": 0.0
+    }
+  },
+  "training_curves": {
+    "incumbent": {
+      "source": "runs/clip1-acoustic-v2/hop-320.json",
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 320,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        }
+      },
+      "scales": [
+        {
+          "training_groups": 276,
+          "training_tracks": 1406,
+          "training_audio_seconds": 6225.039047619048,
+          "training_clips": 1406,
+          "best_epoch": 9,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.6181960892856379
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.513779220306049
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.5033187484105249,
+              "word_edits": 2366,
+              "reference_words": 2418,
+              "wer": 0.978494623655914,
+              "cer": 0.968760816891658
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.5054096265873109
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.49689834052711984
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.49299974778235717,
+              "word_edits": 2407,
+              "reference_words": 2418,
+              "wer": 0.9954507857733664,
+              "cer": 0.9941156109380408
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.49035077986544723
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.4876503814088477
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.49000556905550663,
+              "word_edits": 2330,
+              "reference_words": 2418,
+              "wer": 0.9636062861869313,
+              "cer": 0.944963655244029
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.48373602564128104
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.48263622628854824
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.48101679459826907,
+              "word_edits": 2372,
+              "reference_words": 2418,
+              "wer": 0.9809760132340778,
+              "cer": 0.9360505365178262
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.478820324982736
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.47774848293976274
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.4757237099948524,
+              "word_edits": 2385,
+              "reference_words": 2418,
+              "wer": 0.9863523573200993,
+              "cer": 0.917705088265836
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.47816191445062217
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.4723746397954826
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.47134006650080795,
+              "word_edits": 2353,
+              "reference_words": 2418,
+              "wer": 0.9731182795698925,
+              "cer": 0.9129456559363102
+            }
+          ]
+        }
+      ]
+    },
+    "training_scale": {
+      "source": "runs/clip1-phoneme-v3/scale-20ms.json",
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 320,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        }
+      },
+      "scales": [
+        {
+          "training_groups": 138,
+          "training_tracks": 736,
+          "training_audio_seconds": 3393.8226530612246,
+          "training_clips": 736,
+          "best_epoch": 6,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.6308260505365046
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.5390061221712313
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.4971533490943788,
+              "word_edits": 2399,
+              "reference_words": 2418,
+              "wer": 0.9921422663358147,
+              "cer": 0.9639148494288681
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.4879593792747521
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.48325286787493205
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.4791893074836141,
+              "word_edits": 2340,
+              "reference_words": 2418,
+              "wer": 0.967741935483871,
+              "cer": 0.9508480443059882
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.4756806297767532
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.47699770068055813
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.4753223650925946,
+              "word_edits": 2418,
+              "reference_words": 2418,
+              "wer": 1.0,
+              "cer": 0.994202146071305
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.4761675819612438
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.4656279074623008
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.4626605919281523,
+              "word_edits": 2379,
+              "reference_words": 2418,
+              "wer": 0.9838709677419355,
+              "cer": 0.9452232606438213
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.46006387620200345
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.45804474611320994
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.4539762503525311,
+              "word_edits": 2361,
+              "reference_words": 2418,
+              "wer": 0.9764267990074442,
+              "cer": 0.9280027691242645
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.45156180624984094
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.44700210437636
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.44431300630818255,
+              "word_edits": 2381,
+              "reference_words": 2418,
+              "wer": 0.9846980976013234,
+              "cer": 0.9060228452751817
+            }
+          ]
+        },
+        {
+          "training_groups": 552,
+          "training_tracks": 2766,
+          "training_audio_seconds": 12436.468049886622,
+          "training_clips": 2766,
+          "best_epoch": 6,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.561857355165386
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.5004409579106283
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.4955153560116774,
+              "word_edits": 2411,
+              "reference_words": 2418,
+              "wer": 0.9971050454921423,
+              "cer": 0.9832121841467636
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.48875193165756475
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.48623272624206265
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.4847413524251652,
+              "word_edits": 2337,
+              "reference_words": 2418,
+              "wer": 0.966501240694789,
+              "cer": 0.9717030114226376
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.4829307723231653
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.481360402822421
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.48051991391009985,
+              "word_edits": 2348,
+              "reference_words": 2418,
+              "wer": 0.9710504549214226,
+              "cer": 0.9592419522326064
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.4788995222534457
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.4781266560864875
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.47711787213082546,
+              "word_edits": 2352,
+              "reference_words": 2418,
+              "wer": 0.9727047146401985,
+              "cer": 0.9533575631706472
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.4769212491079888
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.4772313818043033
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.47539988758772866,
+              "word_edits": 2346,
+              "reference_words": 2418,
+              "wer": 0.9702233250620348,
+              "cer": 0.9536171685704395
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.4748838993080734
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.4740624318360963
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.47408602781701753,
+              "word_edits": 2360,
+              "reference_words": 2418,
+              "wer": 0.9760132340777502,
+              "cer": 0.943232952578747
+            }
+          ]
+        }
+      ]
+    },
+    "phoneme": {
+      "source": "runs/clip1-phoneme-v3/phoneme.json",
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 320,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        },
+        "phoneme_loss_weight": 0.3
+      },
+      "scales": [
+        {
+          "training_groups": 276,
+          "training_tracks": 1406,
+          "training_audio_seconds": 6225.039047619048,
+          "training_clips": 1406,
+          "best_epoch": 3,
+          "phoneme_supervised_clips": 1406,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.8224186175503254
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.6398098119373038
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.6289061392344661,
+              "word_edits": 2331,
+              "reference_words": 2418,
+              "wer": 0.9640198511166254,
+              "cer": 0.9577708549671167
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.6333473161297959
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.6208293772682424
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.6171360324066498,
+              "word_edits": 2350,
+              "reference_words": 2418,
+              "wer": 0.9718775847808105,
+              "cer": 0.9762028383523711
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.6181424109793173
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.6110218354716679
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.609355108359552,
+              "word_edits": 2337,
+              "reference_words": 2418,
+              "wer": 0.966501240694789,
+              "cer": 0.9532710280373832
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.6066090263607893
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.6045337137427148
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.6032524256101924,
+              "word_edits": 2373,
+              "reference_words": 2418,
+              "wer": 0.9813895781637717,
+              "cer": 0.9489442713741779
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.6003900751161706
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.5985388358831366
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.5968874833879058,
+              "word_edits": 2363,
+              "reference_words": 2418,
+              "wer": 0.977253928866832,
+              "cer": 0.9229837313949464
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.5942400302668958
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.5923803806319159
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.5918316631486854,
+              "word_edits": 2348,
+              "reference_words": 2418,
+              "wer": 0.9710504549214226,
+              "cer": 0.9171858774662512
+            }
+          ]
+        }
+      ]
+    },
+    "stereo": {
+      "source": "runs/clip1-phoneme-v3/stereo.json",
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 320,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0,
+          "stereo_features": true
+        }
+      },
+      "scales": [
+        {
+          "training_groups": 276,
+          "training_tracks": 1406,
+          "training_audio_seconds": 6225.039047619048,
+          "training_clips": 1406,
+          "best_epoch": 9,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.6610611850082996
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.5196187665517076
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.5071744082296282,
+              "word_edits": 2347,
+              "reference_words": 2418,
+              "wer": 0.9706368899917287,
+              "cer": 0.9444444444444444
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.5145847372318901
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.4986564405293686
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.49369078731831456,
+              "word_edits": 2364,
+              "reference_words": 2418,
+              "wer": 0.9776674937965261,
+              "cer": 0.9738663897542402
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.4933010530430461
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.4895356483362319
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.4868883701093035,
+              "word_edits": 2342,
+              "reference_words": 2418,
+              "wer": 0.9685690653432589,
+              "cer": 0.9558670820353063
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.4842356596602031
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.4844065589225575
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.48203813069164947,
+              "word_edits": 2365,
+              "reference_words": 2418,
+              "wer": 0.97808105872622,
+              "cer": 0.9475597092419522
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.47893793261701695
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.47687200452261347
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.47690107374230156,
+              "word_edits": 2386,
+              "reference_words": 2418,
+              "wer": 0.9867659222497932,
+              "cer": 0.938300449982693
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.4727977459571339
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.4713729543515351
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.47074171076512006,
+              "word_edits": 2358,
+              "reference_words": 2418,
+              "wer": 0.9751861042183623,
+              "cer": 0.9131187262028384
+            }
+          ]
+        }
+      ]
+    },
+    "instrumental_exposure": {
+      "source": "runs/clip1-phoneme-v3/instrumental.json",
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 320,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        }
+      },
+      "scales": [
+        {
+          "training_groups": 278,
+          "training_tracks": 1408,
+          "training_audio_seconds": 6768.55,
+          "training_clips": 1429,
+          "best_epoch": 12,
+          "epochs": [
+            {
+              "epoch": 1,
+              "mean_training_loss": 0.6618827269683987
+            },
+            {
+              "epoch": 2,
+              "mean_training_loss": 0.520450896973067
+            },
+            {
+              "epoch": 3,
+              "mean_training_loss": 0.5068962443419127,
+              "word_edits": 2388,
+              "reference_words": 2418,
+              "wer": 0.9875930521091811,
+              "cer": 0.9725683627552787
+            },
+            {
+              "epoch": 4,
+              "mean_training_loss": 0.4984781635982835
+            },
+            {
+              "epoch": 5,
+              "mean_training_loss": 0.49509605940457585
+            },
+            {
+              "epoch": 6,
+              "mean_training_loss": 0.49411554465119784,
+              "word_edits": 2369,
+              "reference_words": 2418,
+              "wer": 0.9797353184449958,
+              "cer": 0.979491173416407
+            },
+            {
+              "epoch": 7,
+              "mean_training_loss": 0.4882773220529666
+            },
+            {
+              "epoch": 8,
+              "mean_training_loss": 0.4857516696436146
+            },
+            {
+              "epoch": 9,
+              "mean_training_loss": 0.48532213454663564,
+              "word_edits": 2359,
+              "reference_words": 2418,
+              "wer": 0.9755996691480563,
+              "cer": 0.9620976116303219
+            },
+            {
+              "epoch": 10,
+              "mean_training_loss": 0.48153314138051456
+            },
+            {
+              "epoch": 11,
+              "mean_training_loss": 0.48657842274706614
+            },
+            {
+              "epoch": 12,
+              "mean_training_loss": 0.4794221666436655,
+              "word_edits": 2342,
+              "reference_words": 2418,
+              "wer": 0.9685690653432589,
+              "cer": 0.944963655244029
+            },
+            {
+              "epoch": 13,
+              "mean_training_loss": 0.4769228238196382
+            },
+            {
+              "epoch": 14,
+              "mean_training_loss": 0.48826549171873695
+            },
+            {
+              "epoch": 15,
+              "mean_training_loss": 0.4819383803337089,
+              "word_edits": 2376,
+              "reference_words": 2418,
+              "wer": 0.9826302729528535,
+              "cer": 0.9611457251644168
+            },
+            {
+              "epoch": 16,
+              "mean_training_loss": 0.4761974412136758
+            },
+            {
+              "epoch": 17,
+              "mean_training_loss": 0.47443194206916683
+            },
+            {
+              "epoch": 18,
+              "mean_training_loss": 0.47582581834547977,
+              "word_edits": 2366,
+              "reference_words": 2418,
+              "wer": 0.978494623655914,
+              "cer": 0.9627033575631706
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "instrumental_split": {
+    "combined_train_groups": 278,
+    "music_clips": 1406,
+    "music_groups": 276,
+    "music_seed": 0,
+    "music_validation_clips": 347,
+    "negative_train": {
+      "groups": 2,
+      "intervals": 23,
+      "maximum_interval_seconds": 5.340521541950039,
+      "seconds": 70.53049886621228,
+      "source_tracks": 2
+    },
+    "partition_rule": "SHA-256 of domain and sorted group track IDs, lower half training",
+    "reserved_validation": {
+      "groups": 2,
+      "intervals": 14,
+      "seconds": 65.10952380700004,
+      "source_tracks": 3
+    },
+    "scope": "small blank-exposure pilot with reserved human-annotated solos",
+    "sha256": {
+      "combined": "cc12c4e63c0941a4d5d5e3444b3f45c6d907348372d8b737a8e36b2507a8277f",
+      "frozen_test_lock": "9fa1241d905db1d31b1f1695303bb1cecb8c59f1ed1d93aad15cb1fb62ec22c2",
+      "reserved_validation": "d8bef3849685431115e3f8bbbccceaf10640142c58086609da062c3b7e58b5f4",
+      "source_development_manifest": "1d5282bb97528c708da15cf3b10873e23b2f967021c0d6a3449b156070691a8e",
+      "source_rwc_bank": "1f5f82ded617e93a110c81a063ec127511e00d74d934b65f0ef01a95d47fd80b",
+      "train_negatives": "3d49838f3ad84e6db6bd5f71e72fed8b9134be9474e8c0b855d6ba1446fc532d"
+    }
+  },
+  "decoder_sweep": [
+    {
+      "candidate": "selected.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 456,
+      "deletions": 1874,
+      "insertions": 0,
+      "word_edits": 2330,
+      "character_edits": 10920,
+      "tracks": 347,
+      "wer": 0.9636062861869313,
+      "cer": 0.944963655244029,
+      "emitted_words": 544,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 0,
+        "seconds": 65.10952380700004,
+        "words": 0,
+        "interval_false_alarm_rate": 0.0,
+        "words_per_minute": 0.0
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 355,
+      "deletions": 1976,
+      "insertions": 0,
+      "word_edits": 2331,
+      "character_edits": 11068,
+      "tracks": 347,
+      "wer": 0.9640198511166254,
+      "cer": 0.9577708549671167,
+      "emitted_words": 442,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 5,
+        "seconds": 65.10952380700004,
+        "words": 59,
+        "interval_false_alarm_rate": 0.35714285714285715,
+        "words_per_minute": 54.36992613390006
+      }
+    },
+    {
+      "candidate": "scale-20ms.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 278,
+      "deletions": 2059,
+      "insertions": 0,
+      "word_edits": 2337,
+      "character_edits": 11229,
+      "tracks": 347,
+      "wer": 0.966501240694789,
+      "cer": 0.9717030114226376,
+      "emitted_words": 359,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 10,
+        "seconds": 65.10952380700004,
+        "words": 67,
+        "interval_false_alarm_rate": 0.7142857142857143,
+        "words_per_minute": 61.74211950798821
+      }
+    },
+    {
+      "candidate": "stereo.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 379,
+      "deletions": 1963,
+      "insertions": 0,
+      "word_edits": 2342,
+      "character_edits": 11046,
+      "tracks": 347,
+      "wer": 0.9685690653432589,
+      "cer": 0.9558670820353063,
+      "emitted_words": 455,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 0,
+        "seconds": 65.10952380700004,
+        "words": 0,
+        "interval_false_alarm_rate": 0.0,
+        "words_per_minute": 0.0
+      }
+    },
+    {
+      "candidate": "instrumental.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 453,
+      "deletions": 1889,
+      "insertions": 0,
+      "word_edits": 2342,
+      "character_edits": 10920,
+      "tracks": 347,
+      "wer": 0.9685690653432589,
+      "cer": 0.944963655244029,
+      "emitted_words": 529,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 0,
+        "seconds": 65.10952380700004,
+        "words": 0,
+        "interval_false_alarm_rate": 0.0,
+        "words_per_minute": 0.0
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.5,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 779,
+      "deletions": 1554,
+      "insertions": 3,
+      "word_edits": 2336,
+      "character_edits": 10384,
+      "tracks": 347,
+      "wer": 0.9660876757650951,
+      "cer": 0.8985808238144687,
+      "emitted_words": 867,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 0,
+        "seconds": 65.10952380700004,
+        "words": 0,
+        "interval_false_alarm_rate": 0.0,
+        "words_per_minute": 0.0
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 1.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 1298,
+      "deletions": 1049,
+      "insertions": 35,
+      "word_edits": 2382,
+      "character_edits": 9562,
+      "tracks": 347,
+      "wer": 0.9851116625310173,
+      "cer": 0.8274489442713742,
+      "emitted_words": 1404,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 2,
+        "seconds": 65.10952380700004,
+        "words": 2,
+        "interval_false_alarm_rate": 0.14285714285714285,
+        "words_per_minute": 1.843048343522036
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 4,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 711,
+      "deletions": 1617,
+      "insertions": 3,
+      "word_edits": 2331,
+      "character_edits": 10495,
+      "tracks": 347,
+      "wer": 0.9640198511166254,
+      "cer": 0.9081862236067844,
+      "emitted_words": 804,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 5,
+        "seconds": 65.10952380700004,
+        "words": 5,
+        "interval_false_alarm_rate": 0.35714285714285715,
+        "words_per_minute": 4.60762085880509
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 737,
+      "deletions": 1594,
+      "insertions": 2,
+      "word_edits": 2333,
+      "character_edits": 10459,
+      "tracks": 347,
+      "wer": 0.9648469809760132,
+      "cer": 0.9050709588092766,
+      "emitted_words": 826,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 4,
+        "seconds": 65.10952380700004,
+        "words": 5,
+        "interval_false_alarm_rate": 0.2857142857142857,
+        "words_per_minute": 4.60762085880509
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 0.5,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 1301,
+      "deletions": 1057,
+      "insertions": 25,
+      "word_edits": 2383,
+      "character_edits": 9607,
+      "tracks": 347,
+      "wer": 0.9855252274607114,
+      "cer": 0.8313430252682589,
+      "emitted_words": 1386,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 6,
+        "seconds": 65.10952380700004,
+        "words": 8,
+        "interval_false_alarm_rate": 0.42857142857142855,
+        "words_per_minute": 7.372193374088144
+      }
+    },
+    {
+      "candidate": "selected.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 1.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 1818,
+      "deletions": 557,
+      "insertions": 162,
+      "word_edits": 2537,
+      "character_edits": 8799,
+      "tracks": 347,
+      "wer": 1.0492142266335815,
+      "cer": 0.7614226375908619,
+      "emitted_words": 2023,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 6,
+        "seconds": 65.10952380700004,
+        "words": 12,
+        "interval_false_alarm_rate": 0.42857142857142855,
+        "words_per_minute": 11.058290061132215
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 0.5,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 634,
+      "deletions": 1699,
+      "insertions": 0,
+      "word_edits": 2333,
+      "character_edits": 10546,
+      "tracks": 347,
+      "wer": 0.9648469809760132,
+      "cer": 0.9125995154032537,
+      "emitted_words": 719,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 6,
+        "seconds": 65.10952380700004,
+        "words": 63,
+        "interval_false_alarm_rate": 0.42857142857142855,
+        "words_per_minute": 58.056022820944136
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 1,
+      "blank_logit_offset": 1.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 953,
+      "deletions": 1404,
+      "insertions": 9,
+      "word_edits": 2366,
+      "character_edits": 10004,
+      "tracks": 347,
+      "wer": 0.978494623655914,
+      "cer": 0.8656974731741087,
+      "emitted_words": 1023,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 8,
+        "seconds": 65.10952380700004,
+        "words": 66,
+        "interval_false_alarm_rate": 0.5714285714285714,
+        "words_per_minute": 60.820595336227186
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 4,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 478,
+      "deletions": 1856,
+      "insertions": 0,
+      "word_edits": 2334,
+      "character_edits": 10825,
+      "tracks": 347,
+      "wer": 0.9652605459057072,
+      "cer": 0.9367428175839391,
+      "emitted_words": 562,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 11,
+        "seconds": 65.10952380700004,
+        "words": 212,
+        "interval_false_alarm_rate": 0.7857142857142857,
+        "words_per_minute": 195.3631244133358
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 0.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 520,
+      "deletions": 1825,
+      "insertions": 0,
+      "word_edits": 2345,
+      "character_edits": 10742,
+      "tracks": 347,
+      "wer": 0.9698097601323408,
+      "cer": 0.9295604015230183,
+      "emitted_words": 593,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 11,
+        "seconds": 65.10952380700004,
+        "words": 243,
+        "interval_false_alarm_rate": 0.7857142857142857,
+        "words_per_minute": 223.93037373792737
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 0.5,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 1033,
+      "deletions": 1354,
+      "insertions": 10,
+      "word_edits": 2397,
+      "character_edits": 9878,
+      "tracks": 347,
+      "wer": 0.9913151364764268,
+      "cer": 0.8547940463828314,
+      "emitted_words": 1074,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 13,
+        "seconds": 65.10952380700004,
+        "words": 271,
+        "interval_false_alarm_rate": 0.9285714285714286,
+        "words_per_minute": 249.73305054723588
+      }
+    },
+    {
+      "candidate": "phoneme.npz",
+      "beam_width": 8,
+      "blank_logit_offset": 1.0,
+      "reference_words": 2418,
+      "reference_characters": 11556,
+      "substitutions": 1568,
+      "deletions": 841,
+      "insertions": 106,
+      "word_edits": 2515,
+      "character_edits": 9127,
+      "tracks": 347,
+      "wer": 1.0401157981803144,
+      "cer": 0.7898061613014884,
+      "emitted_words": 1683,
+      "instrumental": {
+        "intervals": 14,
+        "intervals_with_words": 14,
+        "seconds": 65.10952380700004,
+        "words": 302,
+        "interval_false_alarm_rate": 1.0,
+        "words_per_minute": 278.30029987182746
+      }
+    }
+  ],
+  "joint_validation": {
+    "instrumental_manifest_sha256": "d8bef3849685431115e3f8bbbccceaf10640142c58086609da062c3b7e58b5f4",
+    "max_instrumental_words_per_minute": null,
+    "eligible_configurations": 17,
+    "instrumental_tracks": 3,
+    "instrumental_genres": [
+      "pop"
+    ],
+    "selection_order": [
+      "wer",
+      "cer",
+      "beam_width",
+      "blank_logit_offset"
+    ],
+    "frontier_metrics": [
+      "wer",
+      "cer",
+      "instrumental.words_per_minute"
+    ],
+    "frontier": [
+      {
+        "candidate": "selected.npz",
+        "beam_width": 1,
+        "blank_logit_offset": 0.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 456,
+        "deletions": 1874,
+        "insertions": 0,
+        "word_edits": 2330,
+        "character_edits": 10920,
+        "tracks": 347,
+        "wer": 0.9636062861869313,
+        "cer": 0.944963655244029,
+        "emitted_words": 544,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 0,
+          "seconds": 65.10952380700004,
+          "words": 0,
+          "interval_false_alarm_rate": 0.0,
+          "words_per_minute": 0.0
+        }
+      },
+      {
+        "candidate": "selected.npz",
+        "beam_width": 1,
+        "blank_logit_offset": 0.5,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 779,
+        "deletions": 1554,
+        "insertions": 3,
+        "word_edits": 2336,
+        "character_edits": 10384,
+        "tracks": 347,
+        "wer": 0.9660876757650951,
+        "cer": 0.8985808238144687,
+        "emitted_words": 867,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 0,
+          "seconds": 65.10952380700004,
+          "words": 0,
+          "interval_false_alarm_rate": 0.0,
+          "words_per_minute": 0.0
+        }
+      },
+      {
+        "candidate": "selected.npz",
+        "beam_width": 1,
+        "blank_logit_offset": 1.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 1298,
+        "deletions": 1049,
+        "insertions": 35,
+        "word_edits": 2382,
+        "character_edits": 9562,
+        "tracks": 347,
+        "wer": 0.9851116625310173,
+        "cer": 0.8274489442713742,
+        "emitted_words": 1404,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 2,
+          "seconds": 65.10952380700004,
+          "words": 2,
+          "interval_false_alarm_rate": 0.14285714285714285,
+          "words_per_minute": 1.843048343522036
+        }
+      },
+      {
+        "candidate": "selected.npz",
+        "beam_width": 4,
+        "blank_logit_offset": 0.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 711,
+        "deletions": 1617,
+        "insertions": 3,
+        "word_edits": 2331,
+        "character_edits": 10495,
+        "tracks": 347,
+        "wer": 0.9640198511166254,
+        "cer": 0.9081862236067844,
+        "emitted_words": 804,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 5,
+          "seconds": 65.10952380700004,
+          "words": 5,
+          "interval_false_alarm_rate": 0.35714285714285715,
+          "words_per_minute": 4.60762085880509
+        }
+      },
+      {
+        "candidate": "selected.npz",
+        "beam_width": 8,
+        "blank_logit_offset": 0.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 737,
+        "deletions": 1594,
+        "insertions": 2,
+        "word_edits": 2333,
+        "character_edits": 10459,
+        "tracks": 347,
+        "wer": 0.9648469809760132,
+        "cer": 0.9050709588092766,
+        "emitted_words": 826,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 4,
+          "seconds": 65.10952380700004,
+          "words": 5,
+          "interval_false_alarm_rate": 0.2857142857142857,
+          "words_per_minute": 4.60762085880509
+        }
+      },
+      {
+        "candidate": "selected.npz",
+        "beam_width": 8,
+        "blank_logit_offset": 1.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 1818,
+        "deletions": 557,
+        "insertions": 162,
+        "word_edits": 2537,
+        "character_edits": 8799,
+        "tracks": 347,
+        "wer": 1.0492142266335815,
+        "cer": 0.7614226375908619,
+        "emitted_words": 2023,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 6,
+          "seconds": 65.10952380700004,
+          "words": 12,
+          "interval_false_alarm_rate": 0.42857142857142855,
+          "words_per_minute": 11.058290061132215
+        }
+      },
+      {
+        "candidate": "phoneme.npz",
+        "beam_width": 1,
+        "blank_logit_offset": 1.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 953,
+        "deletions": 1404,
+        "insertions": 9,
+        "word_edits": 2366,
+        "character_edits": 10004,
+        "tracks": 347,
+        "wer": 0.978494623655914,
+        "cer": 0.8656974731741087,
+        "emitted_words": 1023,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 8,
+          "seconds": 65.10952380700004,
+          "words": 66,
+          "interval_false_alarm_rate": 0.5714285714285714,
+          "words_per_minute": 60.820595336227186
+        }
+      },
+      {
+        "candidate": "phoneme.npz",
+        "beam_width": 8,
+        "blank_logit_offset": 1.0,
+        "reference_words": 2418,
+        "reference_characters": 11556,
+        "substitutions": 1568,
+        "deletions": 841,
+        "insertions": 106,
+        "word_edits": 2515,
+        "character_edits": 9127,
+        "tracks": 347,
+        "wer": 1.0401157981803144,
+        "cer": 0.7898061613014884,
+        "emitted_words": 1683,
+        "instrumental": {
+          "intervals": 14,
+          "intervals_with_words": 14,
+          "seconds": 65.10952380700004,
+          "words": 302,
+          "interval_false_alarm_rate": 1.0,
+          "words_per_minute": 278.30029987182746
+        }
+      }
+    ]
+  },
+  "frozen_20_track_scores_and_sample_predictions": "clip1_ctc_followup.json"
+}

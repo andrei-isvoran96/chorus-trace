@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "chorustrace"
 version = "0.1.0"
-description = "Local short-clip singing transcription with NumPy and CTC"
+description = "Offline singing transcription for PCM WAVs with NumPy and CTC"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.26"]

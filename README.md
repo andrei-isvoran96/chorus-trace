@@ -1,5 +1,7 @@
 # ChorusTrace
 
+ChorusTrace can transcribe one complete PCM WAV offline. The new full-track workflow freezes test assets, selects a checkpoint on separate validation mixes, and reports per-track and aggregate error counts. See the [full-track protocol and results](benchmarks/fulltrack.md) for the measured baseline, checkpoint, and reproduction commands.
+
 ChorusTrace trains a local recognizer for short English singing clips. It reads integer PCM WAV, extracts NumPy log-mel features, and fits a small dilated temporal network with handwritten backpropagation, character CTC, and Adam. Greedy decoding uses the learned frame scores. Training starts from random weights. Transcription needs a WAV and a saved checkpoint and runs offline.
 
 ## Install and use

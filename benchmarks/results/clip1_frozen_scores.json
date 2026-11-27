@@ -1,0 +1,1087 @@
+{
+  "scope": "private noncommercial benchmarking; test contains 20 complete original mixes",
+  "test_lock_sha256": "9fa1241d905db1d31b1f1695303bb1cecb8c59f1ed1d93aad15cb1fb62ec22c2",
+  "selected_checkpoint_sha256": "34da3e6b413358e9ae9c4dde22a5c33c1c9f96851016370a8eb70ea76535ee5e",
+  "baseline_checkpoint_sha256": "6b33b7f3d387292cca5dd29d1d6664b7d61aaacadfff1e845f7ee9dbc2dc1b4b",
+  "selection": {
+    "candidate": "expanded.npz",
+    "blank_logit_offset": 0,
+    "substitutions": 23,
+    "deletions": 218,
+    "insertions": 0,
+    "reference_words": 254,
+    "word_edits": 241,
+    "wer": 0.9488188976377953,
+    "cer": 0.9699749791492911
+  },
+  "learning_curves": [
+    {
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 160,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        }
+      },
+      "checkpoint": "default-disjoint.npz",
+      "selection": {
+        "training_groups": 38,
+        "epoch": 12
+      },
+      "scales": [
+        {
+          "training_groups": 19,
+          "training_tracks": 107,
+          "training_audio_seconds": 462.87126984126985,
+          "training_clips": 107,
+          "best_epoch": 12,
+          "validation": {
+            "substitutions": 63,
+            "deletions": 188,
+            "insertions": 0,
+            "word_edits": 251,
+            "reference_words": 254,
+            "character_edits": 1113,
+            "reference_characters": 1199,
+            "wer": 0.9881889763779528,
+            "cer": 0.9282735613010842,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 38,
+          "training_tracks": 265,
+          "training_audio_seconds": 1244.5073696145125,
+          "training_clips": 265,
+          "best_epoch": 12,
+          "validation": {
+            "substitutions": 30,
+            "deletions": 213,
+            "insertions": 0,
+            "word_edits": 243,
+            "reference_words": 254,
+            "character_edits": 1149,
+            "reference_characters": 1199,
+            "wer": 0.9566929133858267,
+            "cer": 0.9582985821517932,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 76,
+          "training_tracks": 433,
+          "training_audio_seconds": 1983.3302267573697,
+          "training_clips": 433,
+          "best_epoch": 6,
+          "validation": {
+            "substitutions": 18,
+            "deletions": 227,
+            "insertions": 0,
+            "word_edits": 245,
+            "reference_words": 254,
+            "character_edits": 1174,
+            "reference_characters": 1199,
+            "wer": 0.9645669291338582,
+            "cer": 0.9791492910758965,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "configuration": {
+        "epochs": 18,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 160,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        },
+        "dilations": [
+          1,
+          3,
+          9,
+          27,
+          81
+        ]
+      },
+      "checkpoint": "wider-disjoint.npz",
+      "selection": {
+        "training_groups": 38,
+        "epoch": 12
+      },
+      "scales": [
+        {
+          "training_groups": 19,
+          "training_tracks": 107,
+          "training_audio_seconds": 462.87126984126985,
+          "training_clips": 107,
+          "best_epoch": 6,
+          "validation": {
+            "substitutions": 60,
+            "deletions": 190,
+            "insertions": 0,
+            "word_edits": 250,
+            "reference_words": 254,
+            "character_edits": 1116,
+            "reference_characters": 1199,
+            "wer": 0.984251968503937,
+            "cer": 0.9307756463719766,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 38,
+          "training_tracks": 265,
+          "training_audio_seconds": 1244.5073696145125,
+          "training_clips": 265,
+          "best_epoch": 12,
+          "validation": {
+            "substitutions": 25,
+            "deletions": 220,
+            "insertions": 0,
+            "word_edits": 245,
+            "reference_words": 254,
+            "character_edits": 1170,
+            "reference_characters": 1199,
+            "wer": 0.9645669291338582,
+            "cer": 0.97581317764804,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 76,
+          "training_tracks": 433,
+          "training_audio_seconds": 1983.3302267573697,
+          "training_clips": 433,
+          "best_epoch": 12,
+          "validation": {
+            "substitutions": 19,
+            "deletions": 226,
+            "insertions": 0,
+            "word_edits": 245,
+            "reference_words": 254,
+            "character_edits": 1170,
+            "reference_characters": 1199,
+            "wer": 0.9645669291338582,
+            "cer": 0.97581317764804,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "configuration": {
+        "epochs": 12,
+        "learning_rate": 0.003,
+        "hidden_size": 48,
+        "seed": 0,
+        "features": {
+          "sample_rate": 16000,
+          "window_size": 400,
+          "hop_size": 160,
+          "fft_size": 512,
+          "n_mels": 40,
+          "min_hz": 50.0
+        }
+      },
+      "checkpoint": "expanded.npz",
+      "selection": {
+        "training_groups": 276,
+        "epoch": 9
+      },
+      "scales": [
+        {
+          "training_groups": 138,
+          "training_tracks": 736,
+          "training_audio_seconds": 3393.8226530612246,
+          "training_clips": 736,
+          "best_epoch": 6,
+          "validation": {
+            "substitutions": 20,
+            "deletions": 222,
+            "insertions": 0,
+            "word_edits": 242,
+            "reference_words": 254,
+            "character_edits": 1168,
+            "reference_characters": 1199,
+            "wer": 0.952755905511811,
+            "cer": 0.9741451209341118,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 276,
+          "training_tracks": 1406,
+          "training_audio_seconds": 6225.039047619048,
+          "training_clips": 1406,
+          "best_epoch": 9,
+          "validation": {
+            "substitutions": 23,
+            "deletions": 218,
+            "insertions": 0,
+            "word_edits": 241,
+            "reference_words": 254,
+            "character_edits": 1163,
+            "reference_characters": 1199,
+            "wer": 0.9488188976377953,
+            "cer": 0.9699749791492911,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        },
+        {
+          "training_groups": 552,
+          "training_tracks": 2766,
+          "training_audio_seconds": 12436.468049886622,
+          "training_clips": 2766,
+          "best_epoch": 9,
+          "validation": {
+            "substitutions": 24,
+            "deletions": 218,
+            "insertions": 0,
+            "word_edits": 242,
+            "reference_words": 254,
+            "character_edits": 1163,
+            "reference_characters": 1199,
+            "wer": 0.952755905511811,
+            "cer": 0.9699749791492911,
+            "duration_seconds": 156.7932879818594,
+            "instrumental_annotated_tracks": 0,
+            "instrumental_annotated_duration_seconds": 0,
+            "instrumental_tracks_with_intervals": 0,
+            "instrumental": null,
+            "segment_boundaries": {
+              "joins": 0,
+              "timed_tracks": 0,
+              "timed_joins": 0,
+              "near_join": null,
+              "paired_tracks": 0,
+              "paired_timed_tracks": 0,
+              "paired": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "baseline": {
+      "substitutions": 1317,
+      "deletions": 4415,
+      "insertions": 52,
+      "reference_words": 5780,
+      "word_edits": 5784,
+      "wer": 1.0006920415224914,
+      "cer": 0.8900268758625699
+    },
+    "selected": {
+      "substitutions": 30,
+      "deletions": 5726,
+      "insertions": 0,
+      "reference_words": 5780,
+      "word_edits": 5756,
+      "wer": 0.995847750865052,
+      "cer": 0.9965134016125518
+    }
+  },
+  "tracks": [
+    {
+      "track_id": "jamalt:062818c05d9da518",
+      "song_id": "ridgway:fireinside",
+      "genre": "reggae",
+      "duration_seconds": 283.93020408163267,
+      "baseline": {
+        "substitutions": 15,
+        "deletions": 207,
+        "insertions": 0,
+        "reference_words": 224,
+        "word_edits": 222,
+        "wer": 0.9910714285714286,
+        "cer": 0.9563981042654028
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 222,
+        "insertions": 0,
+        "reference_words": 224,
+        "word_edits": 222,
+        "wer": 0.9910714285714286,
+        "cer": 0.9971563981042654
+      }
+    },
+    {
+      "track_id": "jamalt:276d48b3f333846e",
+      "song_id": "jasonmiller:crowdpleaser",
+      "genre": "hip-hop",
+      "duration_seconds": 192.8,
+      "baseline": {
+        "substitutions": 107,
+        "deletions": 405,
+        "insertions": 0,
+        "reference_words": 516,
+        "word_edits": 512,
+        "wer": 0.9922480620155039,
+        "cer": 0.8607545702061454
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 515,
+        "insertions": 0,
+        "reference_words": 516,
+        "word_edits": 515,
+        "wer": 0.998062015503876,
+        "cer": 0.999611046285492
+      }
+    },
+    {
+      "track_id": "jamalt:318a73f140c2b5ff",
+      "song_id": "lunablind:vision",
+      "genre": "pop",
+      "duration_seconds": 220.71428571428572,
+      "baseline": {
+        "substitutions": 45,
+        "deletions": 249,
+        "insertions": 0,
+        "reference_words": 294,
+        "word_edits": 294,
+        "wer": 1.0,
+        "cer": 0.9291338582677166
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 293,
+        "insertions": 0,
+        "reference_words": 294,
+        "word_edits": 294,
+        "wer": 1.0,
+        "cer": 0.9985683607730852
+      }
+    },
+    {
+      "track_id": "jamalt:47c0ec55ba735c75",
+      "song_id": "cortez:feelstripped",
+      "genre": "pop",
+      "duration_seconds": 240.56163265306122,
+      "baseline": {
+        "substitutions": 220,
+        "deletions": 130,
+        "insertions": 0,
+        "reference_words": 356,
+        "word_edits": 350,
+        "wer": 0.9831460674157303,
+        "cer": 0.7380801017164653
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 355,
+        "insertions": 0,
+        "reference_words": 356,
+        "word_edits": 355,
+        "wer": 0.9971910112359551,
+        "cer": 0.9993642720915448
+      }
+    },
+    {
+      "track_id": "jamalt:49c08c7e4642fa7b",
+      "song_id": "kinematic:peyote",
+      "genre": "rock",
+      "duration_seconds": 183.37333333333333,
+      "baseline": {
+        "substitutions": 22,
+        "deletions": 135,
+        "insertions": 0,
+        "reference_words": 159,
+        "word_edits": 157,
+        "wer": 0.9874213836477987,
+        "cer": 0.8912751677852349
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 155,
+        "insertions": 0,
+        "reference_words": 159,
+        "word_edits": 156,
+        "wer": 0.9811320754716981,
+        "cer": 0.9879194630872483
+      }
+    },
+    {
+      "track_id": "jamalt:5c9a08ed46b50630",
+      "song_id": "therinn:voices",
+      "genre": "metal",
+      "duration_seconds": 231.22430839002268,
+      "baseline": {
+        "substitutions": 6,
+        "deletions": 178,
+        "insertions": 0,
+        "reference_words": 184,
+        "word_edits": 184,
+        "wer": 1.0,
+        "cer": 0.9755409219190969
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 183,
+        "insertions": 0,
+        "reference_words": 184,
+        "word_edits": 184,
+        "wer": 1.0,
+        "cer": 0.9990592662276576
+      }
+    },
+    {
+      "track_id": "jamalt:747b89c92b01833d",
+      "song_id": "wordsmith:thestatement",
+      "genre": "hip-hop",
+      "duration_seconds": 171.2,
+      "baseline": {
+        "substitutions": 51,
+        "deletions": 513,
+        "insertions": 0,
+        "reference_words": 569,
+        "word_edits": 564,
+        "wer": 0.9912126537785588,
+        "cer": 0.9497063142437592
+      },
+      "selected": {
+        "substitutions": 12,
+        "deletions": 555,
+        "insertions": 0,
+        "reference_words": 569,
+        "word_edits": 567,
+        "wer": 0.9964850615114236,
+        "cer": 0.9900881057268722
+      }
+    },
+    {
+      "track_id": "jamalt:7640dec5f3c2f49c",
+      "song_id": "songwriterz:backintime",
+      "genre": "pop",
+      "duration_seconds": 209.03385487528345,
+      "baseline": {
+        "substitutions": 4,
+        "deletions": 298,
+        "insertions": 0,
+        "reference_words": 302,
+        "word_edits": 302,
+        "wer": 1.0,
+        "cer": 0.9914330218068536
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 302,
+        "insertions": 0,
+        "reference_words": 302,
+        "word_edits": 302,
+        "wer": 1.0,
+        "cer": 1.0
+      }
+    },
+    {
+      "track_id": "jamalt:8299502d22a40f5b",
+      "song_id": "themadpixproject:onewaystreet",
+      "genre": "electronic",
+      "duration_seconds": 171.0,
+      "baseline": {
+        "substitutions": 38,
+        "deletions": 141,
+        "insertions": 0,
+        "reference_words": 181,
+        "word_edits": 179,
+        "wer": 0.988950276243094,
+        "cer": 0.9038031319910514
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 180,
+        "insertions": 0,
+        "reference_words": 181,
+        "word_edits": 180,
+        "wer": 0.994475138121547,
+        "cer": 0.9988814317673378
+      }
+    },
+    {
+      "track_id": "jamalt:8b28bdf07c733a11",
+      "song_id": "rxbyn:badside",
+      "genre": "rnb",
+      "duration_seconds": 216.55523809523808,
+      "baseline": {
+        "substitutions": 214,
+        "deletions": 187,
+        "insertions": 0,
+        "reference_words": 408,
+        "word_edits": 401,
+        "wer": 0.9828431372549019,
+        "cer": 0.7300509337860781
+      },
+      "selected": {
+        "substitutions": 9,
+        "deletions": 398,
+        "insertions": 0,
+        "reference_words": 408,
+        "word_edits": 407,
+        "wer": 0.9975490196078431,
+        "cer": 0.989247311827957
+      }
+    },
+    {
+      "track_id": "jamalt:90942b897b03561a",
+      "song_id": "avercage:embers",
+      "genre": "rock",
+      "duration_seconds": 242.55691609977325,
+      "baseline": {
+        "substitutions": 71,
+        "deletions": 122,
+        "insertions": 0,
+        "reference_words": 195,
+        "word_edits": 193,
+        "wer": 0.9897435897435898,
+        "cer": 0.8402010050251256
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 194,
+        "insertions": 0,
+        "reference_words": 195,
+        "word_edits": 194,
+        "wer": 0.9948717948717949,
+        "cer": 0.9989949748743718
+      }
+    },
+    {
+      "track_id": "jamalt:975712f798435c70",
+      "song_id": "puremids:theleader",
+      "genre": "indie",
+      "duration_seconds": 262.4,
+      "baseline": {
+        "substitutions": 33,
+        "deletions": 116,
+        "insertions": 0,
+        "reference_words": 149,
+        "word_edits": 149,
+        "wer": 1.0,
+        "cer": 0.8758169934640523
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 149,
+        "insertions": 0,
+        "reference_words": 149,
+        "word_edits": 149,
+        "wer": 1.0,
+        "cer": 1.0
+      }
+    },
+    {
+      "track_id": "jamalt:b54898fcd1519db9",
+      "song_id": "slingshotmiracle:whistler",
+      "genre": "blues",
+      "duration_seconds": 229.2247619047619,
+      "baseline": {
+        "substitutions": 5,
+        "deletions": 155,
+        "insertions": 0,
+        "reference_words": 163,
+        "word_edits": 160,
+        "wer": 0.9815950920245399,
+        "cer": 0.967670011148272
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 162,
+        "insertions": 0,
+        "reference_words": 163,
+        "word_edits": 163,
+        "wer": 1.0,
+        "cer": 0.9988851727982163
+      }
+    },
+    {
+      "track_id": "jamalt:e1e03cef95e0fa3d",
+      "song_id": "hila:givemethesame",
+      "genre": "pop",
+      "duration_seconds": 233.62498866213153,
+      "baseline": {
+        "substitutions": 80,
+        "deletions": 198,
+        "insertions": 0,
+        "reference_words": 279,
+        "word_edits": 278,
+        "wer": 0.996415770609319,
+        "cer": 0.8280542986425339
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 279,
+        "insertions": 0,
+        "reference_words": 279,
+        "word_edits": 279,
+        "wer": 1.0,
+        "cer": 1.0
+      }
+    },
+    {
+      "track_id": "jamalt:e3418b25c259a56e",
+      "song_id": "quentinhannappe:keepon",
+      "genre": "pop",
+      "duration_seconds": 189.84,
+      "baseline": {
+        "substitutions": 171,
+        "deletions": 0,
+        "insertions": 52,
+        "reference_words": 174,
+        "word_edits": 223,
+        "wer": 1.2816091954022988,
+        "cer": 0.7719688542825361
+      },
+      "selected": {
+        "substitutions": 3,
+        "deletions": 168,
+        "insertions": 0,
+        "reference_words": 174,
+        "word_edits": 171,
+        "wer": 0.9827586206896551,
+        "cer": 0.9877641824249166
+      }
+    },
+    {
+      "track_id": "jamalt:e644893b272664af",
+      "song_id": "explosiveearcandy:likethesun",
+      "genre": "pop",
+      "duration_seconds": 192.92165532879818,
+      "baseline": {
+        "substitutions": 5,
+        "deletions": 409,
+        "insertions": 0,
+        "reference_words": 415,
+        "word_edits": 414,
+        "wer": 0.9975903614457832,
+        "cer": 0.9867584745762712
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 415,
+        "insertions": 0,
+        "reference_words": 415,
+        "word_edits": 415,
+        "wer": 1.0,
+        "cer": 1.0
+      }
+    },
+    {
+      "track_id": "jamalt:e91e4b683580ed85",
+      "song_id": "colourout:fallingstar",
+      "genre": "rock",
+      "duration_seconds": 221.97845804988663,
+      "baseline": {
+        "substitutions": 64,
+        "deletions": 162,
+        "insertions": 0,
+        "reference_words": 231,
+        "word_edits": 226,
+        "wer": 0.9783549783549783,
+        "cer": 0.8535681186283596
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 230,
+        "insertions": 0,
+        "reference_words": 231,
+        "word_edits": 230,
+        "wer": 0.9956709956709957,
+        "cer": 0.9990732159406858
+      }
+    },
+    {
+      "track_id": "jamalt:ed9becee04e028e7",
+      "song_id": "moonimean:wrongconcept",
+      "genre": "reggae",
+      "duration_seconds": 219.99566893424037,
+      "baseline": {
+        "substitutions": 67,
+        "deletions": 196,
+        "insertions": 0,
+        "reference_words": 268,
+        "word_edits": 263,
+        "wer": 0.9813432835820896,
+        "cer": 0.8662613981762918
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 263,
+        "insertions": 0,
+        "reference_words": 268,
+        "word_edits": 264,
+        "wer": 0.9850746268656716,
+        "cer": 0.993161094224924
+      }
+    },
+    {
+      "track_id": "jamalt:f21176f91ba41998",
+      "song_id": "tomorlando:theonefeattinag",
+      "genre": "rnb",
+      "duration_seconds": 240.04625850340136,
+      "baseline": {
+        "substitutions": 50,
+        "deletions": 451,
+        "insertions": 0,
+        "reference_words": 501,
+        "word_edits": 501,
+        "wer": 1.0,
+        "cer": 0.9382978723404255
+      },
+      "selected": {
+        "substitutions": 1,
+        "deletions": 497,
+        "insertions": 0,
+        "reference_words": 501,
+        "word_edits": 498,
+        "wer": 0.9940119760479041,
+        "cer": 0.9965957446808511
+      }
+    },
+    {
+      "track_id": "jamalt:feb59bf2c1fa8b84",
+      "song_id": "lowerloveday:isitright",
+      "genre": "indie",
+      "duration_seconds": 180.06149659863945,
+      "baseline": {
+        "substitutions": 49,
+        "deletions": 163,
+        "insertions": 0,
+        "reference_words": 212,
+        "word_edits": 212,
+        "wer": 1.0,
+        "cer": 0.9144676979071884
+      },
+      "selected": {
+        "substitutions": 0,
+        "deletions": 211,
+        "insertions": 0,
+        "reference_words": 212,
+        "word_edits": 211,
+        "wer": 0.9952830188679245,
+        "cer": 0.9990900818926297
+      }
+    }
+  ],
+  "instrumental_diagnostics": {
+    "baseline": {
+      "track_count": 5,
+      "duration_seconds": 1334.1238775510205,
+      "instrumental": {
+        "intervals": 5,
+        "intervals_with_words": 5,
+        "seconds": 1334.1238775510205,
+        "words": 2269,
+        "interval_false_alarm_rate": 1.0,
+        "words_per_minute": 102.04449698472145
+      },
+      "tracks": [
+        {
+          "track_id": "rwc_j001",
+          "song_id": "jive",
+          "genre": "jazz",
+          "duration_seconds": 200.54199546485262,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 200.54199546485262,
+            "words": 660,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 197.46487466731313
+          }
+        },
+        {
+          "track_id": "rwc_j007",
+          "song_id": "fortwo",
+          "genre": "jazz",
+          "duration_seconds": 214.30698412698413,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 214.30698412698413,
+            "words": 411,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 115.06857837814617
+          }
+        },
+        {
+          "track_id": "rwc_j013",
+          "song_id": "loungeaway",
+          "genre": "jazz",
+          "duration_seconds": 225.3550113378685,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 225.3550113378685,
+            "words": 412,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 109.69358903200956
+          }
+        },
+        {
+          "track_id": "rwc_j019",
+          "song_id": "crescentserenade",
+          "genre": "jazz",
+          "duration_seconds": 313.325873015873,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 313.325873015873,
+            "words": 451,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 86.36375840762166
+          }
+        },
+        {
+          "track_id": "rwc_j025",
+          "song_id": "abyss",
+          "genre": "jazz",
+          "duration_seconds": 380.59401360544217,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 380.59401360544217,
+            "words": 335,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 52.812181173289446
+          }
+        }
+      ]
+    },
+    "selected": {
+      "track_count": 5,
+      "duration_seconds": 1334.1238775510205,
+      "instrumental": {
+        "intervals": 5,
+        "intervals_with_words": 5,
+        "seconds": 1334.1238775510205,
+        "words": 8,
+        "interval_false_alarm_rate": 1.0,
+        "words_per_minute": 0.3597866795406662
+      },
+      "tracks": [
+        {
+          "track_id": "rwc_j001",
+          "song_id": "jive",
+          "genre": "jazz",
+          "duration_seconds": 200.54199546485262,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 200.54199546485262,
+            "words": 1,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 0.29918920404138355
+          }
+        },
+        {
+          "track_id": "rwc_j007",
+          "song_id": "fortwo",
+          "genre": "jazz",
+          "duration_seconds": 214.30698412698413,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 214.30698412698413,
+            "words": 2,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 0.5599444203316115
+          }
+        },
+        {
+          "track_id": "rwc_j013",
+          "song_id": "loungeaway",
+          "genre": "jazz",
+          "duration_seconds": 225.3550113378685,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 225.3550113378685,
+            "words": 2,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 0.532493150640823
+          }
+        },
+        {
+          "track_id": "rwc_j019",
+          "song_id": "crescentserenade",
+          "genre": "jazz",
+          "duration_seconds": 313.325873015873,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 313.325873015873,
+            "words": 2,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 0.38298784216240206
+          }
+        },
+        {
+          "track_id": "rwc_j025",
+          "song_id": "abyss",
+          "genre": "jazz",
+          "duration_seconds": 380.59401360544217,
+          "instrumental": {
+            "intervals": 1,
+            "intervals_with_words": 1,
+            "seconds": 380.59401360544217,
+            "words": 1,
+            "interval_false_alarm_rate": 1.0,
+            "words_per_minute": 0.15764830200981925
+          }
+        }
+      ]
+    }
+  },
+  "segment_boundaries": {
+    "joins": 209,
+    "timed_tracks": 0,
+    "timed_joins": 0,
+    "near_join": null,
+    "paired_tracks": 20,
+    "paired_timed_tracks": 0,
+    "paired": {
+      "unsegmented_word_edits": 5756,
+      "segmentation_only_word_edits": 0,
+      "unsegmented_only_word_edits": 0,
+      "unsegmented_near_join_word_edits": null,
+      "segmentation_only_near_join_edits": null,
+      "unsegmented_only_near_join_edits": null,
+      "identical_transcript_tracks": 20
+    }
+  },
+  "sample_predictions": [
+    {
+      "track_id": "jamalt:062818c05d9da518",
+      "prediction": "i i"
+    },
+    {
+      "track_id": "jamalt:276d48b3f333846e",
+      "prediction": "i"
+    },
+    {
+      "track_id": "jamalt:318a73f140c2b5ff",
+      "prediction": "ie"
+    }
+  ],
+  "meets_goal": false
+}

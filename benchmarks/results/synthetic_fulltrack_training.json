@@ -1,0 +1,3621 @@
+{
+  "configuration": {
+    "epochs": 100,
+    "features": {
+      "fft_size": 512,
+      "hop_size": 160,
+      "min_hz": 50.0,
+      "n_mels": 40,
+      "sample_rate": 16000,
+      "window_size": 400
+    },
+    "hidden_size": 48,
+    "learning_rate": 0.003,
+    "seed": 0
+  },
+  "learning_curve": [
+    {
+      "best_epoch": 90,
+      "epochs": [
+        {
+          "epoch": 1,
+          "mean_training_loss": 1.625775010259713
+        },
+        {
+          "epoch": 2,
+          "mean_training_loss": 0.5151466565618249
+        },
+        {
+          "epoch": 3,
+          "mean_training_loss": 0.3738519992316027
+        },
+        {
+          "epoch": 4,
+          "mean_training_loss": 0.3125681789289311
+        },
+        {
+          "epoch": 5,
+          "mean_training_loss": 0.2612215262187336,
+          "validation": {
+            "cer": 0.7445652173913043,
+            "character_edits": 137,
+            "deletions": 13,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 12,
+              "words_per_minute": 15.894039735099339
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 27,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 6,
+          "mean_training_loss": 0.1977066594563908
+        },
+        {
+          "epoch": 7,
+          "mean_training_loss": 0.22118790652643927
+        },
+        {
+          "epoch": 8,
+          "mean_training_loss": 0.13007501043304695
+        },
+        {
+          "epoch": 9,
+          "mean_training_loss": 0.11584888978290041
+        },
+        {
+          "epoch": 10,
+          "mean_training_loss": 0.10188976184583433,
+          "validation": {
+            "cer": 0.9891304347826086,
+            "character_edits": 182,
+            "deletions": 38,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 2,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 11,
+          "mean_training_loss": 0.10128263467504027
+        },
+        {
+          "epoch": 12,
+          "mean_training_loss": 0.10117056603229732
+        },
+        {
+          "epoch": 13,
+          "mean_training_loss": 0.09855295945820478
+        },
+        {
+          "epoch": 14,
+          "mean_training_loss": 0.09398158211190964
+        },
+        {
+          "epoch": 15,
+          "mean_training_loss": 0.08886470110499324,
+          "validation": {
+            "cer": 0.9619565217391305,
+            "character_edits": 177,
+            "deletions": 37,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 2,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 16,
+          "mean_training_loss": 0.08890728173943886
+        },
+        {
+          "epoch": 17,
+          "mean_training_loss": 0.08805578635187619
+        },
+        {
+          "epoch": 18,
+          "mean_training_loss": 0.08868155686181599
+        },
+        {
+          "epoch": 19,
+          "mean_training_loss": 0.0854831558542654
+        },
+        {
+          "epoch": 20,
+          "mean_training_loss": 0.0858487017694481,
+          "validation": {
+            "cer": 0.9293478260869565,
+            "character_edits": 171,
+            "deletions": 34,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 6,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 21,
+          "mean_training_loss": 0.081349806883592
+        },
+        {
+          "epoch": 22,
+          "mean_training_loss": 0.07880168764333434
+        },
+        {
+          "epoch": 23,
+          "mean_training_loss": 0.07739084471363468
+        },
+        {
+          "epoch": 24,
+          "mean_training_loss": 0.0788011442028926
+        },
+        {
+          "epoch": 25,
+          "mean_training_loss": 0.07636128270047951,
+          "validation": {
+            "cer": 0.9239130434782609,
+            "character_edits": 170,
+            "deletions": 33,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.08333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 1,
+              "seconds": 45.3,
+              "words": 1,
+              "words_per_minute": 1.3245033112582782
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 7,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 26,
+          "mean_training_loss": 0.07807777129171271
+        },
+        {
+          "epoch": 27,
+          "mean_training_loss": 0.08029585776063411
+        },
+        {
+          "epoch": 28,
+          "mean_training_loss": 0.07741280489672539
+        },
+        {
+          "epoch": 29,
+          "mean_training_loss": 0.08426074858643876
+        },
+        {
+          "epoch": 30,
+          "mean_training_loss": 0.08459802786073899,
+          "validation": {
+            "cer": 0.9130434782608695,
+            "character_edits": 168,
+            "deletions": 33,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.08333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 1,
+              "seconds": 45.3,
+              "words": 1,
+              "words_per_minute": 1.3245033112582782
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 6,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 31,
+          "mean_training_loss": 0.07516863314879792
+        },
+        {
+          "epoch": 32,
+          "mean_training_loss": 0.0717057606541531
+        },
+        {
+          "epoch": 33,
+          "mean_training_loss": 0.07043056770130393
+        },
+        {
+          "epoch": 34,
+          "mean_training_loss": 0.07168797937128192
+        },
+        {
+          "epoch": 35,
+          "mean_training_loss": 0.06790114890476245,
+          "validation": {
+            "cer": 0.9456521739130435,
+            "character_edits": 174,
+            "deletions": 36,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 4,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 36,
+          "mean_training_loss": 0.07487289201124243
+        },
+        {
+          "epoch": 37,
+          "mean_training_loss": 0.0686904147479409
+        },
+        {
+          "epoch": 38,
+          "mean_training_loss": 0.06612421701861892
+        },
+        {
+          "epoch": 39,
+          "mean_training_loss": 0.062693918869381
+        },
+        {
+          "epoch": 40,
+          "mean_training_loss": 0.0639593297116401,
+          "validation": {
+            "cer": 0.8913043478260869,
+            "character_edits": 164,
+            "deletions": 33,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 7,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 41,
+          "mean_training_loss": 0.06089545740699069
+        },
+        {
+          "epoch": 42,
+          "mean_training_loss": 0.05800712303365116
+        },
+        {
+          "epoch": 43,
+          "mean_training_loss": 0.05834139880690606
+        },
+        {
+          "epoch": 44,
+          "mean_training_loss": 0.054170997526923385
+        },
+        {
+          "epoch": 45,
+          "mean_training_loss": 0.05419036542798117,
+          "validation": {
+            "cer": 0.8260869565217391,
+            "character_edits": 152,
+            "deletions": 28,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.3333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 4,
+              "seconds": 45.3,
+              "words": 4,
+              "words_per_minute": 5.298013245033113
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 12,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 46,
+          "mean_training_loss": 0.061500909145027954
+        },
+        {
+          "epoch": 47,
+          "mean_training_loss": 0.06143898715720368
+        },
+        {
+          "epoch": 48,
+          "mean_training_loss": 0.056382544584282684
+        },
+        {
+          "epoch": 49,
+          "mean_training_loss": 0.0664301476112902
+        },
+        {
+          "epoch": 50,
+          "mean_training_loss": 0.062028120289429826,
+          "validation": {
+            "cer": 0.782608695652174,
+            "character_edits": 144,
+            "deletions": 25,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.3333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 4,
+              "seconds": 45.3,
+              "words": 4,
+              "words_per_minute": 5.298013245033113
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 15,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 51,
+          "mean_training_loss": 0.05697463254574771
+        },
+        {
+          "epoch": 52,
+          "mean_training_loss": 0.05013148731145487
+        },
+        {
+          "epoch": 53,
+          "mean_training_loss": 0.049619805512809714
+        },
+        {
+          "epoch": 54,
+          "mean_training_loss": 0.04516762081268054
+        },
+        {
+          "epoch": 55,
+          "mean_training_loss": 0.04462093291371872,
+          "validation": {
+            "cer": 0.8858695652173914,
+            "character_edits": 163,
+            "deletions": 34,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.08333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 1,
+              "seconds": 45.3,
+              "words": 1,
+              "words_per_minute": 1.3245033112582782
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 6,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 56,
+          "mean_training_loss": 0.043712373760146035
+        },
+        {
+          "epoch": 57,
+          "mean_training_loss": 0.04257629920934767
+        },
+        {
+          "epoch": 58,
+          "mean_training_loss": 0.040928263266939886
+        },
+        {
+          "epoch": 59,
+          "mean_training_loss": 0.041428027223890704
+        },
+        {
+          "epoch": 60,
+          "mean_training_loss": 0.043087498042945455,
+          "validation": {
+            "cer": 0.8478260869565217,
+            "character_edits": 156,
+            "deletions": 30,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 10,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 61,
+          "mean_training_loss": 0.0391485747230398
+        },
+        {
+          "epoch": 62,
+          "mean_training_loss": 0.03698955686811953
+        },
+        {
+          "epoch": 63,
+          "mean_training_loss": 0.03749106586258461
+        },
+        {
+          "epoch": 64,
+          "mean_training_loss": 0.033895110397860334
+        },
+        {
+          "epoch": 65,
+          "mean_training_loss": 0.03263172567109555,
+          "validation": {
+            "cer": 0.8532608695652174,
+            "character_edits": 157,
+            "deletions": 30,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 10,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 66,
+          "mean_training_loss": 0.031175099773617997
+        },
+        {
+          "epoch": 67,
+          "mean_training_loss": 0.029976128049953046
+        },
+        {
+          "epoch": 68,
+          "mean_training_loss": 0.028977336854994942
+        },
+        {
+          "epoch": 69,
+          "mean_training_loss": 0.028807174367982514
+        },
+        {
+          "epoch": 70,
+          "mean_training_loss": 0.028045935273599724,
+          "validation": {
+            "cer": 0.842391304347826,
+            "character_edits": 155,
+            "deletions": 32,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 8,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 71,
+          "mean_training_loss": 0.028384020141133445
+        },
+        {
+          "epoch": 72,
+          "mean_training_loss": 0.02832827307840446
+        },
+        {
+          "epoch": 73,
+          "mean_training_loss": 0.02664452067249792
+        },
+        {
+          "epoch": 74,
+          "mean_training_loss": 0.02799014124710215
+        },
+        {
+          "epoch": 75,
+          "mean_training_loss": 0.025057534950361768,
+          "validation": {
+            "cer": 0.8641304347826086,
+            "character_edits": 159,
+            "deletions": 32,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 8,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 76,
+          "mean_training_loss": 0.02297126807245905
+        },
+        {
+          "epoch": 77,
+          "mean_training_loss": 0.023102915641373397
+        },
+        {
+          "epoch": 78,
+          "mean_training_loss": 0.022386447019235745
+        },
+        {
+          "epoch": 79,
+          "mean_training_loss": 0.02181556362659526
+        },
+        {
+          "epoch": 80,
+          "mean_training_loss": 0.02082036599304118,
+          "validation": {
+            "cer": 0.8260869565217391,
+            "character_edits": 152,
+            "deletions": 31,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 8,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 81,
+          "mean_training_loss": 0.02104057942096566
+        },
+        {
+          "epoch": 82,
+          "mean_training_loss": 0.026678029299577202
+        },
+        {
+          "epoch": 83,
+          "mean_training_loss": 0.03227863036036384
+        },
+        {
+          "epoch": 84,
+          "mean_training_loss": 0.029829432666620546
+        },
+        {
+          "epoch": 85,
+          "mean_training_loss": 0.026669787380666842,
+          "validation": {
+            "cer": 0.7065217391304348,
+            "character_edits": 130,
+            "deletions": 19,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 5,
+              "words_per_minute": 6.622516556291391
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 0,
+                "insertions": 0,
+                "substitutions": 3,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 21,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 86,
+          "mean_training_loss": 0.04133244463395414
+        },
+        {
+          "epoch": 87,
+          "mean_training_loss": 0.036116051383895106
+        },
+        {
+          "epoch": 88,
+          "mean_training_loss": 0.034525723759351416
+        },
+        {
+          "epoch": 89,
+          "mean_training_loss": 0.028148144683269347
+        },
+        {
+          "epoch": 90,
+          "mean_training_loss": 0.02458459550624099,
+          "validation": {
+            "cer": 0.7989130434782609,
+            "character_edits": 147,
+            "deletions": 26,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.25,
+              "intervals": 12,
+              "intervals_with_words": 3,
+              "seconds": 45.3,
+              "words": 3,
+              "words_per_minute": 3.9735099337748347
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 0,
+                "insertions": 0,
+                "substitutions": 3,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 13,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 91,
+          "mean_training_loss": 0.02091273948297613
+        },
+        {
+          "epoch": 92,
+          "mean_training_loss": 0.016976476821313844
+        },
+        {
+          "epoch": 93,
+          "mean_training_loss": 0.015584989797380315
+        },
+        {
+          "epoch": 94,
+          "mean_training_loss": 0.0147472880779373
+        },
+        {
+          "epoch": 95,
+          "mean_training_loss": 0.01436236080512419,
+          "validation": {
+            "cer": 0.8369565217391305,
+            "character_edits": 154,
+            "deletions": 30,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 10,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 96,
+          "mean_training_loss": 0.013444529915717894
+        },
+        {
+          "epoch": 97,
+          "mean_training_loss": 0.012696642446115567
+        },
+        {
+          "epoch": 98,
+          "mean_training_loss": 0.0123117989555128
+        },
+        {
+          "epoch": 99,
+          "mean_training_loss": 0.011774553771533936
+        },
+        {
+          "epoch": 100,
+          "mean_training_loss": 0.011565954310823896,
+          "validation": {
+            "cer": 0.8206521739130435,
+            "character_edits": 151,
+            "deletions": 30,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.3333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 4,
+              "seconds": 45.3,
+              "words": 4,
+              "words_per_minute": 5.298013245033113
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 10,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        }
+      ],
+      "training_audio_seconds": 68.2094375,
+      "training_clips": 22,
+      "training_groups": 2,
+      "training_tracks": 2
+    },
+    {
+      "best_epoch": 80,
+      "epochs": [
+        {
+          "epoch": 1,
+          "mean_training_loss": 1.4340519784232246
+        },
+        {
+          "epoch": 2,
+          "mean_training_loss": 0.5278229312688882
+        },
+        {
+          "epoch": 3,
+          "mean_training_loss": 0.26532772053966436
+        },
+        {
+          "epoch": 4,
+          "mean_training_loss": 0.1310338116371399
+        },
+        {
+          "epoch": 5,
+          "mean_training_loss": 0.11787469124155017,
+          "validation": {
+            "cer": 0.9945652173913043,
+            "character_edits": 183,
+            "deletions": 39,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 1,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 6,
+          "mean_training_loss": 0.11225907814476964
+        },
+        {
+          "epoch": 7,
+          "mean_training_loss": 0.11077694447705543
+        },
+        {
+          "epoch": 8,
+          "mean_training_loss": 0.10233357027970139
+        },
+        {
+          "epoch": 9,
+          "mean_training_loss": 0.09706587619309313
+        },
+        {
+          "epoch": 10,
+          "mean_training_loss": 0.09915518995065888,
+          "validation": {
+            "cer": 0.9945652173913043,
+            "character_edits": 183,
+            "deletions": 39,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 1,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 11,
+          "mean_training_loss": 0.09802261873216794
+        },
+        {
+          "epoch": 12,
+          "mean_training_loss": 0.10134446631370518
+        },
+        {
+          "epoch": 13,
+          "mean_training_loss": 0.09284866229701656
+        },
+        {
+          "epoch": 14,
+          "mean_training_loss": 0.08945990272532706
+        },
+        {
+          "epoch": 15,
+          "mean_training_loss": 0.09040310633663376,
+          "validation": {
+            "cer": 0.9510869565217391,
+            "character_edits": 175,
+            "deletions": 36,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 4,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 16,
+          "mean_training_loss": 0.09041623719530632
+        },
+        {
+          "epoch": 17,
+          "mean_training_loss": 0.0868040270346678
+        },
+        {
+          "epoch": 18,
+          "mean_training_loss": 0.08691794553354387
+        },
+        {
+          "epoch": 19,
+          "mean_training_loss": 0.08430910725296231
+        },
+        {
+          "epoch": 20,
+          "mean_training_loss": 0.08269577278866669,
+          "validation": {
+            "cer": 0.9565217391304348,
+            "character_edits": 176,
+            "deletions": 35,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 5,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 21,
+          "mean_training_loss": 0.08097993857031995
+        },
+        {
+          "epoch": 22,
+          "mean_training_loss": 0.08070701602539279
+        },
+        {
+          "epoch": 23,
+          "mean_training_loss": 0.07911573854054045
+        },
+        {
+          "epoch": 24,
+          "mean_training_loss": 0.07798918510463927
+        },
+        {
+          "epoch": 25,
+          "mean_training_loss": 0.08298599414645234,
+          "validation": {
+            "cer": 0.9836956521739131,
+            "character_edits": 181,
+            "deletions": 38,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 2,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 26,
+          "mean_training_loss": 0.08414419875991323
+        },
+        {
+          "epoch": 27,
+          "mean_training_loss": 0.07757236047484978
+        },
+        {
+          "epoch": 28,
+          "mean_training_loss": 0.07398658281932773
+        },
+        {
+          "epoch": 29,
+          "mean_training_loss": 0.07335444532770118
+        },
+        {
+          "epoch": 30,
+          "mean_training_loss": 0.07181905222271158,
+          "validation": {
+            "cer": 0.7989130434782609,
+            "character_edits": 147,
+            "deletions": 23,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 17,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 31,
+          "mean_training_loss": 0.07009303204209745
+        },
+        {
+          "epoch": 32,
+          "mean_training_loss": 0.06838378680463507
+        },
+        {
+          "epoch": 33,
+          "mean_training_loss": 0.07034507548654294
+        },
+        {
+          "epoch": 34,
+          "mean_training_loss": 0.07279670556970276
+        },
+        {
+          "epoch": 35,
+          "mean_training_loss": 0.06662059042481575,
+          "validation": {
+            "cer": 0.8641304347826086,
+            "character_edits": 159,
+            "deletions": 29,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 11,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 36,
+          "mean_training_loss": 0.062353961119280175
+        },
+        {
+          "epoch": 37,
+          "mean_training_loss": 0.061293514410200096
+        },
+        {
+          "epoch": 38,
+          "mean_training_loss": 0.06344364030943613
+        },
+        {
+          "epoch": 39,
+          "mean_training_loss": 0.07001382303345599
+        },
+        {
+          "epoch": 40,
+          "mean_training_loss": 0.06405178616944697,
+          "validation": {
+            "cer": 0.8206521739130435,
+            "character_edits": 151,
+            "deletions": 25,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.3333333333333333,
+              "intervals": 12,
+              "intervals_with_words": 4,
+              "seconds": 45.3,
+              "words": 4,
+              "words_per_minute": 5.298013245033113
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 15,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 41,
+          "mean_training_loss": 0.05816730544611741
+        },
+        {
+          "epoch": 42,
+          "mean_training_loss": 0.05529275765512101
+        },
+        {
+          "epoch": 43,
+          "mean_training_loss": 0.052771580080551425
+        },
+        {
+          "epoch": 44,
+          "mean_training_loss": 0.05058204811357296
+        },
+        {
+          "epoch": 45,
+          "mean_training_loss": 0.0520517448259693,
+          "validation": {
+            "cer": 0.782608695652174,
+            "character_edits": 144,
+            "deletions": 23,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.25,
+              "intervals": 12,
+              "intervals_with_words": 3,
+              "seconds": 45.3,
+              "words": 3,
+              "words_per_minute": 3.9735099337748347
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 16,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 46,
+          "mean_training_loss": 0.049117568226085824
+        },
+        {
+          "epoch": 47,
+          "mean_training_loss": 0.05438554551969111
+        },
+        {
+          "epoch": 48,
+          "mean_training_loss": 0.04893631514318741
+        },
+        {
+          "epoch": 49,
+          "mean_training_loss": 0.04649076016506886
+        },
+        {
+          "epoch": 50,
+          "mean_training_loss": 0.043555088430202255,
+          "validation": {
+            "cer": 0.7391304347826086,
+            "character_edits": 136,
+            "deletions": 21,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 5,
+              "words_per_minute": 6.622516556291391
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 19,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 51,
+          "mean_training_loss": 0.0510190077413133
+        },
+        {
+          "epoch": 52,
+          "mean_training_loss": 0.06283083416048114
+        },
+        {
+          "epoch": 53,
+          "mean_training_loss": 0.04848662705723897
+        },
+        {
+          "epoch": 54,
+          "mean_training_loss": 0.04125897305231418
+        },
+        {
+          "epoch": 55,
+          "mean_training_loss": 0.044330808665002636,
+          "validation": {
+            "cer": 0.782608695652174,
+            "character_edits": 144,
+            "deletions": 24,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 16,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 56,
+          "mean_training_loss": 0.042730452327489635
+        },
+        {
+          "epoch": 57,
+          "mean_training_loss": 0.042546026861388184
+        },
+        {
+          "epoch": 58,
+          "mean_training_loss": 0.04151164852555086
+        },
+        {
+          "epoch": 59,
+          "mean_training_loss": 0.03341708796192922
+        },
+        {
+          "epoch": 60,
+          "mean_training_loss": 0.031437082091750786,
+          "validation": {
+            "cer": 0.7065217391304348,
+            "character_edits": 130,
+            "deletions": 18,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 61,
+          "mean_training_loss": 0.03058443552696697
+        },
+        {
+          "epoch": 62,
+          "mean_training_loss": 0.03872229667102479
+        },
+        {
+          "epoch": 63,
+          "mean_training_loss": 0.040256607281307866
+        },
+        {
+          "epoch": 64,
+          "mean_training_loss": 0.03165976649311225
+        },
+        {
+          "epoch": 65,
+          "mean_training_loss": 0.027067228786160025,
+          "validation": {
+            "cer": 0.6793478260869565,
+            "character_edits": 125,
+            "deletions": 18,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 66,
+          "mean_training_loss": 0.02536191421654954
+        },
+        {
+          "epoch": 67,
+          "mean_training_loss": 0.024060579567434046
+        },
+        {
+          "epoch": 68,
+          "mean_training_loss": 0.024070303062890288
+        },
+        {
+          "epoch": 69,
+          "mean_training_loss": 0.024918277415082048
+        },
+        {
+          "epoch": 70,
+          "mean_training_loss": 0.025834029018651047,
+          "validation": {
+            "cer": 0.6467391304347826,
+            "character_edits": 119,
+            "deletions": 13,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 27,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 71,
+          "mean_training_loss": 0.024728258636996295
+        },
+        {
+          "epoch": 72,
+          "mean_training_loss": 0.02294759197850676
+        },
+        {
+          "epoch": 73,
+          "mean_training_loss": 0.022361947960659493
+        },
+        {
+          "epoch": 74,
+          "mean_training_loss": 0.02369632491772039
+        },
+        {
+          "epoch": 75,
+          "mean_training_loss": 0.0219804430947548,
+          "validation": {
+            "cer": 0.625,
+            "character_edits": 115,
+            "deletions": 14,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 26,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 76,
+          "mean_training_loss": 0.018319900935843184
+        },
+        {
+          "epoch": 77,
+          "mean_training_loss": 0.016901762213807774
+        },
+        {
+          "epoch": 78,
+          "mean_training_loss": 0.017179961399676782
+        },
+        {
+          "epoch": 79,
+          "mean_training_loss": 0.01564522878417969
+        },
+        {
+          "epoch": 80,
+          "mean_training_loss": 0.014170063338971355,
+          "validation": {
+            "cer": 0.6467391304347826,
+            "character_edits": 119,
+            "deletions": 17,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 5,
+              "words_per_minute": 6.622516556291391
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 81,
+          "mean_training_loss": 0.012912864657120467
+        },
+        {
+          "epoch": 82,
+          "mean_training_loss": 0.012350090983007893
+        },
+        {
+          "epoch": 83,
+          "mean_training_loss": 0.011536261925847696
+        },
+        {
+          "epoch": 84,
+          "mean_training_loss": 0.012212499685350348
+        },
+        {
+          "epoch": 85,
+          "mean_training_loss": 0.013656893691280482,
+          "validation": {
+            "cer": 0.6739130434782609,
+            "character_edits": 124,
+            "deletions": 19,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 5,
+              "words_per_minute": 6.622516556291391
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 20,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 86,
+          "mean_training_loss": 0.014707975639409393
+        },
+        {
+          "epoch": 87,
+          "mean_training_loss": 0.013749904464338552
+        },
+        {
+          "epoch": 88,
+          "mean_training_loss": 0.011907859046747264
+        },
+        {
+          "epoch": 89,
+          "mean_training_loss": 0.011967955201025955
+        },
+        {
+          "epoch": 90,
+          "mean_training_loss": 0.017130017926212226,
+          "validation": {
+            "cer": 0.6413043478260869,
+            "character_edits": 118,
+            "deletions": 11,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 0,
+                "insertions": 0,
+                "substitutions": 3,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 29,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 91,
+          "mean_training_loss": 0.020420332308538302
+        },
+        {
+          "epoch": 92,
+          "mean_training_loss": 0.025226633089369344
+        },
+        {
+          "epoch": 93,
+          "mean_training_loss": 0.03563487057201174
+        },
+        {
+          "epoch": 94,
+          "mean_training_loss": 0.03948458930663616
+        },
+        {
+          "epoch": 95,
+          "mean_training_loss": 0.025968744375671083,
+          "validation": {
+            "cer": 0.657608695652174,
+            "character_edits": 121,
+            "deletions": 24,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 15,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 96,
+          "mean_training_loss": 0.013177426674407095
+        },
+        {
+          "epoch": 97,
+          "mean_training_loss": 0.0098572932632198
+        },
+        {
+          "epoch": 98,
+          "mean_training_loss": 0.008649656366425526
+        },
+        {
+          "epoch": 99,
+          "mean_training_loss": 0.007437066423755495
+        },
+        {
+          "epoch": 100,
+          "mean_training_loss": 0.006178504003606347,
+          "validation": {
+            "cer": 0.6521739130434783,
+            "character_edits": 120,
+            "deletions": 17,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        }
+      ],
+      "training_audio_seconds": 137.64768750000002,
+      "training_clips": 44,
+      "training_groups": 4,
+      "training_tracks": 4
+    },
+    {
+      "best_epoch": 85,
+      "epochs": [
+        {
+          "epoch": 1,
+          "mean_training_loss": 0.9155724319664382
+        },
+        {
+          "epoch": 2,
+          "mean_training_loss": 0.18717631027572804
+        },
+        {
+          "epoch": 3,
+          "mean_training_loss": 0.16697751575788525
+        },
+        {
+          "epoch": 4,
+          "mean_training_loss": 0.14054603939114252
+        },
+        {
+          "epoch": 5,
+          "mean_training_loss": 0.10807138135998398,
+          "validation": {
+            "cer": 1.0,
+            "character_edits": 184,
+            "deletions": 40,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 0,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 6,
+          "mean_training_loss": 0.10092684853183004
+        },
+        {
+          "epoch": 7,
+          "mean_training_loss": 0.0968351645171902
+        },
+        {
+          "epoch": 8,
+          "mean_training_loss": 0.09611866384747964
+        },
+        {
+          "epoch": 9,
+          "mean_training_loss": 0.09633295109799361
+        },
+        {
+          "epoch": 10,
+          "mean_training_loss": 0.09269514572844068,
+          "validation": {
+            "cer": 1.0,
+            "character_edits": 184,
+            "deletions": 40,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.0,
+              "intervals": 12,
+              "intervals_with_words": 0,
+              "seconds": 45.3,
+              "words": 0,
+              "words_per_minute": 0.0
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 0,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 11,
+          "mean_training_loss": 0.09213314294642833
+        },
+        {
+          "epoch": 12,
+          "mean_training_loss": 0.09133472584122462
+        },
+        {
+          "epoch": 13,
+          "mean_training_loss": 0.08996271366529338
+        },
+        {
+          "epoch": 14,
+          "mean_training_loss": 0.08818536655628767
+        },
+        {
+          "epoch": 15,
+          "mean_training_loss": 0.08608039911216342,
+          "validation": {
+            "cer": 0.9728260869565217,
+            "character_edits": 179,
+            "deletions": 38,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 2,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 16,
+          "mean_training_loss": 0.08447997031602358
+        },
+        {
+          "epoch": 17,
+          "mean_training_loss": 0.08177192341724426
+        },
+        {
+          "epoch": 18,
+          "mean_training_loss": 0.08043332830522286
+        },
+        {
+          "epoch": 19,
+          "mean_training_loss": 0.07752282686696478
+        },
+        {
+          "epoch": 20,
+          "mean_training_loss": 0.07621409697577627,
+          "validation": {
+            "cer": 0.9347826086956522,
+            "character_edits": 172,
+            "deletions": 37,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 3,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 21,
+          "mean_training_loss": 0.07351590725742507
+        },
+        {
+          "epoch": 22,
+          "mean_training_loss": 0.07222477126429627
+        },
+        {
+          "epoch": 23,
+          "mean_training_loss": 0.0705382501646507
+        },
+        {
+          "epoch": 24,
+          "mean_training_loss": 0.06669214220821525
+        },
+        {
+          "epoch": 25,
+          "mean_training_loss": 0.06459244035354048,
+          "validation": {
+            "cer": 0.8641304347826086,
+            "character_edits": 159,
+            "deletions": 37,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.16666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 2,
+              "seconds": 45.3,
+              "words": 2,
+              "words_per_minute": 2.6490066225165565
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 3,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 3,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 26,
+          "mean_training_loss": 0.06214781402405363
+        },
+        {
+          "epoch": 27,
+          "mean_training_loss": 0.06239651757787967
+        },
+        {
+          "epoch": 28,
+          "mean_training_loss": 0.05919121334319932
+        },
+        {
+          "epoch": 29,
+          "mean_training_loss": 0.05705141458955568
+        },
+        {
+          "epoch": 30,
+          "mean_training_loss": 0.05525750855286025,
+          "validation": {
+            "cer": 0.7880434782608695,
+            "character_edits": 145,
+            "deletions": 35,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.25,
+              "intervals": 12,
+              "intervals_with_words": 3,
+              "seconds": 45.3,
+              "words": 3,
+              "words_per_minute": 3.9735099337748347
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 5,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 31,
+          "mean_training_loss": 0.05825181722576971
+        },
+        {
+          "epoch": 32,
+          "mean_training_loss": 0.05238785238554538
+        },
+        {
+          "epoch": 33,
+          "mean_training_loss": 0.05152568836757654
+        },
+        {
+          "epoch": 34,
+          "mean_training_loss": 0.048174576692492116
+        },
+        {
+          "epoch": 35,
+          "mean_training_loss": 0.04816296306350196,
+          "validation": {
+            "cer": 0.7336956521739131,
+            "character_edits": 135,
+            "deletions": 27,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 13,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 36,
+          "mean_training_loss": 0.04650429836623091
+        },
+        {
+          "epoch": 37,
+          "mean_training_loss": 0.042150015515502515
+        },
+        {
+          "epoch": 38,
+          "mean_training_loss": 0.042982569615878104
+        },
+        {
+          "epoch": 39,
+          "mean_training_loss": 0.039531246710965084
+        },
+        {
+          "epoch": 40,
+          "mean_training_loss": 0.037036069579774684,
+          "validation": {
+            "cer": 0.7010869565217391,
+            "character_edits": 129,
+            "deletions": 22,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 16,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 41,
+          "mean_training_loss": 0.037474452755653254
+        },
+        {
+          "epoch": 42,
+          "mean_training_loss": 0.03641829385168994
+        },
+        {
+          "epoch": 43,
+          "mean_training_loss": 0.034868300165786265
+        },
+        {
+          "epoch": 44,
+          "mean_training_loss": 0.03156449618119057
+        },
+        {
+          "epoch": 45,
+          "mean_training_loss": 0.029240728326147106,
+          "validation": {
+            "cer": 0.5760869565217391,
+            "character_edits": 106,
+            "deletions": 15,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 23,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 46,
+          "mean_training_loss": 0.028709746572407255
+        },
+        {
+          "epoch": 47,
+          "mean_training_loss": 0.02867640862734213
+        },
+        {
+          "epoch": 48,
+          "mean_training_loss": 0.02860124942889358
+        },
+        {
+          "epoch": 49,
+          "mean_training_loss": 0.025240210730820334
+        },
+        {
+          "epoch": 50,
+          "mean_training_loss": 0.023473916950684126,
+          "validation": {
+            "cer": 0.5217391304347826,
+            "character_edits": 96,
+            "deletions": 9,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 2,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 29,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 51,
+          "mean_training_loss": 0.028143643387887465
+        },
+        {
+          "epoch": 52,
+          "mean_training_loss": 0.021297276931647024
+        },
+        {
+          "epoch": 53,
+          "mean_training_loss": 0.01939456102971301
+        },
+        {
+          "epoch": 54,
+          "mean_training_loss": 0.017566555648348397
+        },
+        {
+          "epoch": 55,
+          "mean_training_loss": 0.01672670061336902,
+          "validation": {
+            "cer": 0.5489130434782609,
+            "character_edits": 101,
+            "deletions": 19,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.6666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 8,
+              "seconds": 45.3,
+              "words": 8,
+              "words_per_minute": 10.596026490066226
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 19,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 56,
+          "mean_training_loss": 0.016399081447428958
+        },
+        {
+          "epoch": 57,
+          "mean_training_loss": 0.015496245705881689
+        },
+        {
+          "epoch": 58,
+          "mean_training_loss": 0.01660464300910266
+        },
+        {
+          "epoch": 59,
+          "mean_training_loss": 0.015635426162486872
+        },
+        {
+          "epoch": 60,
+          "mean_training_loss": 0.013692336545832134,
+          "validation": {
+            "cer": 0.5489130434782609,
+            "character_edits": 101,
+            "deletions": 20,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.6666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 8,
+              "seconds": 45.3,
+              "words": 8,
+              "words_per_minute": 10.596026490066226
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 19,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 61,
+          "mean_training_loss": 0.013329995847757297
+        },
+        {
+          "epoch": 62,
+          "mean_training_loss": 0.020594847423045123
+        },
+        {
+          "epoch": 63,
+          "mean_training_loss": 0.017247306976198643
+        },
+        {
+          "epoch": 64,
+          "mean_training_loss": 0.015913267627944892
+        },
+        {
+          "epoch": 65,
+          "mean_training_loss": 0.012570773485503072,
+          "validation": {
+            "cer": 0.4945652173913043,
+            "character_edits": 91,
+            "deletions": 19,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.6666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 8,
+              "seconds": 45.3,
+              "words": 8,
+              "words_per_minute": 10.596026490066226
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 19,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 66,
+          "mean_training_loss": 0.010117898677503569
+        },
+        {
+          "epoch": 67,
+          "mean_training_loss": 0.009474145777626121
+        },
+        {
+          "epoch": 68,
+          "mean_training_loss": 0.00847464471178356
+        },
+        {
+          "epoch": 69,
+          "mean_training_loss": 0.007673867009335678
+        },
+        {
+          "epoch": 70,
+          "mean_training_loss": 0.007670356344512602,
+          "validation": {
+            "cer": 0.5108695652173914,
+            "character_edits": 94,
+            "deletions": 14,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 25,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 71,
+          "mean_training_loss": 0.006593013399818274
+        },
+        {
+          "epoch": 72,
+          "mean_training_loss": 0.006943781446673699
+        },
+        {
+          "epoch": 73,
+          "mean_training_loss": 0.006915663536744379
+        },
+        {
+          "epoch": 74,
+          "mean_training_loss": 0.006113874584568063
+        },
+        {
+          "epoch": 75,
+          "mean_training_loss": 0.006742467899449344,
+          "validation": {
+            "cer": 0.483695652173913,
+            "character_edits": 89,
+            "deletions": 17,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        },
+        {
+          "epoch": 76,
+          "mean_training_loss": 0.025180537140094883
+        },
+        {
+          "epoch": 77,
+          "mean_training_loss": 0.19807305385792343
+        },
+        {
+          "epoch": 78,
+          "mean_training_loss": 0.05771994345796991
+        },
+        {
+          "epoch": 79,
+          "mean_training_loss": 0.03759781974977589
+        },
+        {
+          "epoch": 80,
+          "mean_training_loss": 0.029664269189779713,
+          "validation": {
+            "cer": 0.6086956521739131,
+            "character_edits": 112,
+            "deletions": 16,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 3
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 24,
+            "wer": 1.0,
+            "word_edits": 40
+          }
+        },
+        {
+          "epoch": 81,
+          "mean_training_loss": 0.02574661323612335
+        },
+        {
+          "epoch": 82,
+          "mean_training_loss": 0.02035539051833059
+        },
+        {
+          "epoch": 83,
+          "mean_training_loss": 0.01767043340076862
+        },
+        {
+          "epoch": 84,
+          "mean_training_loss": 0.015650915620098384
+        },
+        {
+          "epoch": 85,
+          "mean_training_loss": 0.014688650313921558,
+          "validation": {
+            "cer": 0.5434782608695652,
+            "character_edits": 100,
+            "deletions": 12,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.4166666666666667,
+              "intervals": 12,
+              "intervals_with_words": 5,
+              "seconds": 45.3,
+              "words": 5,
+              "words_per_minute": 6.622516556291391
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 25,
+            "wer": 0.925,
+            "word_edits": 37
+          }
+        },
+        {
+          "epoch": 86,
+          "mean_training_loss": 0.014277019102784285
+        },
+        {
+          "epoch": 87,
+          "mean_training_loss": 0.012755707812921485
+        },
+        {
+          "epoch": 88,
+          "mean_training_loss": 0.011494250454175398
+        },
+        {
+          "epoch": 89,
+          "mean_training_loss": 0.010310754582394903
+        },
+        {
+          "epoch": 90,
+          "mean_training_loss": 0.009573713845217068,
+          "validation": {
+            "cer": 0.5054347826086957,
+            "character_edits": 93,
+            "deletions": 15,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5833333333333334,
+              "intervals": 12,
+              "intervals_with_words": 7,
+              "seconds": 45.3,
+              "words": 7,
+              "words_per_minute": 9.271523178807948
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 23,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 91,
+          "mean_training_loss": 0.009229476782735564
+        },
+        {
+          "epoch": 92,
+          "mean_training_loss": 0.008645358174707917
+        },
+        {
+          "epoch": 93,
+          "mean_training_loss": 0.00813119665499671
+        },
+        {
+          "epoch": 94,
+          "mean_training_loss": 0.007349682511002179
+        },
+        {
+          "epoch": 95,
+          "mean_training_loss": 0.007385981709461254,
+          "validation": {
+            "cer": 0.5108695652173914,
+            "character_edits": 94,
+            "deletions": 16,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.6666666666666666,
+              "intervals": 12,
+              "intervals_with_words": 8,
+              "seconds": 45.3,
+              "words": 8,
+              "words_per_minute": 10.596026490066226
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 2,
+                "insertions": 0,
+                "substitutions": 0,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 22,
+            "wer": 0.95,
+            "word_edits": 38
+          }
+        },
+        {
+          "epoch": 96,
+          "mean_training_loss": 0.007066850135618321
+        },
+        {
+          "epoch": 97,
+          "mean_training_loss": 0.006448109756411576
+        },
+        {
+          "epoch": 98,
+          "mean_training_loss": 0.006330577208789109
+        },
+        {
+          "epoch": 99,
+          "mean_training_loss": 0.005833404149335073
+        },
+        {
+          "epoch": 100,
+          "mean_training_loss": 0.006240140978828587,
+          "validation": {
+            "cer": 0.5163043478260869,
+            "character_edits": 95,
+            "deletions": 16,
+            "duration_seconds": 68.8270625,
+            "insertions": 0,
+            "instrumental": {
+              "interval_false_alarm_rate": 0.5,
+              "intervals": 12,
+              "intervals_with_words": 6,
+              "seconds": 45.3,
+              "words": 6,
+              "words_per_minute": 7.9470198675496695
+            },
+            "instrumental_annotated_duration_seconds": 68.8270625,
+            "instrumental_annotated_tracks": 2,
+            "instrumental_tracks_with_intervals": 2,
+            "reference_characters": 184,
+            "reference_words": 40,
+            "segment_boundaries": {
+              "joins": 2,
+              "near_join": {
+                "deletions": 1,
+                "insertions": 0,
+                "substitutions": 1,
+                "word_edits": 2
+              },
+              "paired": null,
+              "paired_timed_tracks": 0,
+              "paired_tracks": 0,
+              "timed_joins": 2,
+              "timed_tracks": 2
+            },
+            "substitutions": 23,
+            "wer": 0.975,
+            "word_edits": 39
+          }
+        }
+      ],
+      "training_audio_seconds": 273.901,
+      "training_clips": 88,
+      "training_groups": 8,
+      "training_tracks": 8
+    }
+  ],
+  "scope": "generated full-track development validation",
+  "selection": {
+    "epoch": 85,
+    "training_groups": 8
+  },
+  "training_clip_seconds": 12.0,
+  "validate_every": 5,
+  "validation": {
+    "aggregate": {
+      "cer": 0.5434782608695652,
+      "character_edits": 100,
+      "deletions": 12,
+      "duration_seconds": 68.8270625,
+      "insertions": 0,
+      "instrumental": {
+        "interval_false_alarm_rate": 0.4166666666666667,
+        "intervals": 12,
+        "intervals_with_words": 5,
+        "seconds": 45.3,
+        "words": 5,
+        "words_per_minute": 6.622516556291391
+      },
+      "instrumental_annotated_duration_seconds": 68.8270625,
+      "instrumental_annotated_tracks": 2,
+      "instrumental_tracks_with_intervals": 2,
+      "reference_characters": 184,
+      "reference_words": 40,
+      "segment_boundaries": {
+        "joins": 2,
+        "near_join": {
+          "deletions": 1,
+          "insertions": 0,
+          "substitutions": 1,
+          "word_edits": 2
+        },
+        "paired": {
+          "identical_transcript_tracks": 2,
+          "segmentation_only_near_join_edits": 0,
+          "segmentation_only_word_edits": 0,
+          "unsegmented_near_join_word_edits": 2,
+          "unsegmented_only_near_join_edits": 0,
+          "unsegmented_only_word_edits": 0,
+          "unsegmented_word_edits": 37
+        },
+        "paired_timed_tracks": 2,
+        "paired_tracks": 2,
+        "timed_joins": 2,
+        "timed_tracks": 2
+      },
+      "substitutions": 25,
+      "wer": 0.925,
+      "word_edits": 37
+    },
+    "samples": [
+      {
+        "prediction": "he the on mtw siee tgnigghthe athe l he ighthelu s mnigh te",
+        "reference": "hear the moon today we see you tonight hear the moon today hello light hello moon we see you tonight",
+        "track_id": "generated-validation-01"
+      },
+      {
+        "prediction": "see no t t mtodywthe y ss mn tt tot lsnog is hioo whear ig",
+        "reference": "see a note today we hear you sing see a note today the song is high we hear you sing",
+        "track_id": "generated-validation-02"
+      }
+    ],
+    "settings": {
+      "boundary_window_seconds": 0.5,
+      "compare_unsegmented": true,
+      "segment_seconds": 20.0
+    },
+    "track_count": 2,
+    "tracks": [
+      {
+        "cer": 0.57,
+        "character_edits": 57,
+        "deletions": 7,
+        "duration_seconds": 35.272625,
+        "genre": "synthetic",
+        "insertions": 0,
+        "instrumental": {
+          "interval_false_alarm_rate": 0.3333333333333333,
+          "intervals": 6,
+          "intervals_with_words": 2,
+          "seconds": 22.649999999999995,
+          "words": 2,
+          "words_per_minute": 5.298013245033114
+        },
+        "reference_characters": 100,
+        "reference_words": 20,
+        "segment_boundaries": {
+          "joins": 1,
+          "near_join": {
+            "deletions": 1,
+            "insertions": 0,
+            "substitutions": 0,
+            "word_edits": 1
+          },
+          "paired": {
+            "identical_transcript": true,
+            "segmentation_only_near_join_edits": 0,
+            "segmentation_only_word_edits": 0,
+            "unsegmented_near_join_word_edits": 1,
+            "unsegmented_only_near_join_edits": 0,
+            "unsegmented_only_word_edits": 0,
+            "unsegmented_word_edits": 19
+          }
+        },
+        "song_id": "generated-validation-01",
+        "substitutions": 12,
+        "track_id": "generated-validation-01",
+        "wer": 0.95,
+        "word_edits": 19
+      },
+      {
+        "cer": 0.5119047619047619,
+        "character_edits": 43,
+        "deletions": 5,
+        "duration_seconds": 33.5544375,
+        "genre": "synthetic",
+        "insertions": 0,
+        "instrumental": {
+          "interval_false_alarm_rate": 0.5,
+          "intervals": 6,
+          "intervals_with_words": 3,
+          "seconds": 22.650000000000002,
+          "words": 3,
+          "words_per_minute": 7.947019867549668
+        },
+        "reference_characters": 84,
+        "reference_words": 20,
+        "segment_boundaries": {
+          "joins": 1,
+          "near_join": {
+            "deletions": 0,
+            "insertions": 0,
+            "substitutions": 1,
+            "word_edits": 1
+          },
+          "paired": {
+            "identical_transcript": true,
+            "segmentation_only_near_join_edits": 0,
+            "segmentation_only_word_edits": 0,
+            "unsegmented_near_join_word_edits": 1,
+            "unsegmented_only_near_join_edits": 0,
+            "unsegmented_only_word_edits": 0,
+            "unsegmented_word_edits": 18
+          }
+        },
+        "song_id": "generated-validation-02",
+        "substitutions": 13,
+        "track_id": "generated-validation-02",
+        "wer": 0.9,
+        "word_edits": 18
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-"""Local singing transcription from short PCM WAV clips."""
+"""Offline singing transcription from PCM WAVs."""
 
 from .audio import FeatureConfig
 from .chorus import align_posteriors, evaluate_choruses, pool_posteriors

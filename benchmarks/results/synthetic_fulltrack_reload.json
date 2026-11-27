@@ -1,0 +1,150 @@
+{
+  "aggregate": {
+    "cer": 0.5434782608695652,
+    "character_edits": 100,
+    "deletions": 12,
+    "duration_seconds": 68.8270625,
+    "insertions": 0,
+    "instrumental": {
+      "interval_false_alarm_rate": 0.4166666666666667,
+      "intervals": 12,
+      "intervals_with_words": 5,
+      "seconds": 45.3,
+      "words": 5,
+      "words_per_minute": 6.622516556291391
+    },
+    "instrumental_annotated_duration_seconds": 68.8270625,
+    "instrumental_annotated_tracks": 2,
+    "instrumental_tracks_with_intervals": 2,
+    "reference_characters": 184,
+    "reference_words": 40,
+    "segment_boundaries": {
+      "joins": 2,
+      "near_join": {
+        "deletions": 1,
+        "insertions": 0,
+        "substitutions": 1,
+        "word_edits": 2
+      },
+      "paired": {
+        "identical_transcript_tracks": 2,
+        "segmentation_only_near_join_edits": 0,
+        "segmentation_only_word_edits": 0,
+        "unsegmented_near_join_word_edits": 2,
+        "unsegmented_only_near_join_edits": 0,
+        "unsegmented_only_word_edits": 0,
+        "unsegmented_word_edits": 37
+      },
+      "paired_timed_tracks": 2,
+      "paired_tracks": 2,
+      "timed_joins": 2,
+      "timed_tracks": 2
+    },
+    "substitutions": 25,
+    "wer": 0.925,
+    "word_edits": 37
+  },
+  "samples": [
+    {
+      "prediction": "he the on mtw siee tgnigghthe athe l he ighthelu s mnigh te",
+      "reference": "hear the moon today we see you tonight hear the moon today hello light hello moon we see you tonight",
+      "track_id": "generated-validation-01"
+    },
+    {
+      "prediction": "see no t t mtodywthe y ss mn tt tot lsnog is hioo whear ig",
+      "reference": "see a note today we hear you sing see a note today the song is high we hear you sing",
+      "track_id": "generated-validation-02"
+    }
+  ],
+  "scope": "generated full-track development validation",
+  "settings": {
+    "boundary_window_seconds": 0.5,
+    "compare_unsegmented": true,
+    "segment_seconds": 20.0
+  },
+  "track_count": 2,
+  "tracks": [
+    {
+      "cer": 0.57,
+      "character_edits": 57,
+      "deletions": 7,
+      "duration_seconds": 35.272625,
+      "genre": "synthetic",
+      "insertions": 0,
+      "instrumental": {
+        "interval_false_alarm_rate": 0.3333333333333333,
+        "intervals": 6,
+        "intervals_with_words": 2,
+        "seconds": 22.649999999999995,
+        "words": 2,
+        "words_per_minute": 5.298013245033114
+      },
+      "reference_characters": 100,
+      "reference_words": 20,
+      "segment_boundaries": {
+        "joins": 1,
+        "near_join": {
+          "deletions": 1,
+          "insertions": 0,
+          "substitutions": 0,
+          "word_edits": 1
+        },
+        "paired": {
+          "identical_transcript": true,
+          "segmentation_only_near_join_edits": 0,
+          "segmentation_only_word_edits": 0,
+          "unsegmented_near_join_word_edits": 1,
+          "unsegmented_only_near_join_edits": 0,
+          "unsegmented_only_word_edits": 0,
+          "unsegmented_word_edits": 19
+        }
+      },
+      "song_id": "generated-validation-01",
+      "substitutions": 12,
+      "track_id": "generated-validation-01",
+      "wer": 0.95,
+      "word_edits": 19
+    },
+    {
+      "cer": 0.5119047619047619,
+      "character_edits": 43,
+      "deletions": 5,
+      "duration_seconds": 33.5544375,
+      "genre": "synthetic",
+      "insertions": 0,
+      "instrumental": {
+        "interval_false_alarm_rate": 0.5,
+        "intervals": 6,
+        "intervals_with_words": 3,
+        "seconds": 22.650000000000002,
+        "words": 3,
+        "words_per_minute": 7.947019867549668
+      },
+      "reference_characters": 84,
+      "reference_words": 20,
+      "segment_boundaries": {
+        "joins": 1,
+        "near_join": {
+          "deletions": 0,
+          "insertions": 0,
+          "substitutions": 1,
+          "word_edits": 1
+        },
+        "paired": {
+          "identical_transcript": true,
+          "segmentation_only_near_join_edits": 0,
+          "segmentation_only_word_edits": 0,
+          "unsegmented_near_join_word_edits": 1,
+          "unsegmented_only_near_join_edits": 0,
+          "unsegmented_only_word_edits": 0,
+          "unsegmented_word_edits": 18
+        }
+      },
+      "song_id": "generated-validation-02",
+      "substitutions": 13,
+      "track_id": "generated-validation-02",
+      "wer": 0.9,
+      "word_edits": 18
+    }
+  ]
+}

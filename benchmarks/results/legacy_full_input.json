@@ -1,0 +1,235 @@
+{
+  "eligible_full_tracks": 0,
+  "goal_wer": null,
+  "synthetic_fixture": {
+    "checkpoint_sha256": "6b33b7f3d387292cca5dd29d1d6664b7d61aaacadfff1e845f7ee9dbc2dc1b4b",
+    "aggregate": {
+      "wer": 1.0,
+      "cer": 0.6287878787878788,
+      "word_edits": 29,
+      "reference_words": 29,
+      "character_edits": 83,
+      "reference_characters": 132
+    },
+    "tracks": [
+      {
+        "track_id": "test-01",
+        "duration_seconds": 8.5444375,
+        "reference": "we sing tonight we sing tonight we sing today",
+        "prediction": "e t nigte s tot son",
+        "wer": 1.0,
+        "cer": 0.6222222222222222,
+        "word_edits": 9,
+        "reference_words": 9,
+        "character_edits": 28,
+        "reference_characters": 45
+      },
+      {
+        "track_id": "test-02",
+        "duration_seconds": 8.4145625,
+        "reference": "see the light we hear the song sing a high note",
+        "prediction": "eie nitwee h r m ni onw i yono",
+        "wer": 1.0,
+        "cer": 0.6170212765957447,
+        "word_edits": 11,
+        "reference_words": 11,
+        "character_edits": 29,
+        "reference_characters": 47
+      },
+      {
+        "track_id": "test-03",
+        "duration_seconds": 7.898875,
+        "reference": "hello sky hear me tonight we sing a song",
+        "prediction": "e tle nr nte se g ono",
+        "wer": 1.0,
+        "cer": 0.65,
+        "word_edits": 9,
+        "reference_words": 9,
+        "character_edits": 26,
+        "reference_characters": 40
+      }
+    ]
+  },
+  "real_prefix_five_song_checkpoint": {
+    "checkpoint_sha256": "656ddfe534d08828f3163af71e2c712dbde32dc1818af1c700e35d623eee6c1d",
+    "aggregate": {
+      "wer": 1.0462962962962963,
+      "cer": 0.8731417244796829,
+      "word_edits": 452,
+      "reference_words": 432,
+      "character_edits": 1762,
+      "reference_characters": 2018
+    },
+    "tracks": [
+      {
+        "track_id": "Cristina Vane - So Easy",
+        "genre": "folk/blues",
+        "annotated_intervals": 10,
+        "emitted_words": 81,
+        "prediction_preview": "sssssslssssessolse s sls l i m mos t oais e mpe riotsiiss",
+        "wer": 1.0,
+        "cer": 0.8554216867469879,
+        "word_edits": 91,
+        "reference_words": 91,
+        "character_edits": 355,
+        "reference_characters": 415
+      },
+      {
+        "track_id": "Girls Under Glass - We Feel Alright",
+        "genre": "electronic",
+        "annotated_intervals": 5,
+        "emitted_words": 67,
+        "prediction_preview": "hessssjsssss ssss sssssslssssss ssss sssssssss essss ssssssssssss essnssssssstsesesssss sss tsssssssse sdssss stsssst",
+        "wer": 1.0,
+        "cer": 0.8552631578947368,
+        "word_edits": 34,
+        "reference_words": 34,
+        "character_edits": 130,
+        "reference_characters": 152
+      },
+      {
+        "track_id": "Lyndsey Ollard - Catching Up",
+        "genre": "pop",
+        "annotated_intervals": 6,
+        "emitted_words": 81,
+        "prediction_preview": "lytlyli hee e hs y ikgiiii s yi isl uettiyi ia ia",
+        "wer": 1.0,
+        "cer": 0.8605769230769231,
+        "word_edits": 43,
+        "reference_words": 43,
+        "character_edits": 179,
+        "reference_characters": 208
+      },
+      {
+        "track_id": "M.E.R.C. Music - Knockout",
+        "genre": "hip-hop",
+        "annotated_intervals": 6,
+        "emitted_words": 38,
+        "prediction_preview": "ccccyccua l krsss sl ora arclldmo lwoemrl ie lretrolowrr lee mheisrrheiia ihceme'dhl",
+        "wer": 0.9940828402366864,
+        "cer": 0.8672456575682382,
+        "word_edits": 168,
+        "reference_words": 169,
+        "character_edits": 699,
+        "reference_characters": 806
+      },
+      {
+        "track_id": "Nerve 9 - Pray For The Rain",
+        "genre": "rock",
+        "annotated_intervals": 9,
+        "emitted_words": 101,
+        "prediction_preview": "lyi sa yh y uols'sslm h y ire is li eens a",
+        "wer": 1.3442622950819672,
+        "cer": 0.9252669039145908,
+        "word_edits": 82,
+        "reference_words": 61,
+        "character_edits": 260,
+        "reference_characters": 281
+      },
+      {
+        "track_id": "Side Effects Project - Sing With Me",
+        "genre": "hip-hop",
+        "annotated_intervals": 3,
+        "emitted_words": 99,
+        "prediction_preview": "lssll lle eesors oeff o ma v e ed s ikvoh row",
+        "wer": 1.0,
+        "cer": 0.8910256410256411,
+        "word_edits": 34,
+        "reference_words": 34,
+        "character_edits": 139,
+        "reference_characters": 156
+      }
+    ]
+  },
+  "real_prefix_twenty_song_checkpoint": {
+    "checkpoint_sha256": "fe151acd3c1cfd7fb4488f64c1e1384bcfc14550a6df5c863c10fa02abf7c0a7",
+    "aggregate": {
+      "wer": 0.9861111111111112,
+      "cer": 0.8191278493557979,
+      "word_edits": 426,
+      "reference_words": 432,
+      "character_edits": 1653,
+      "reference_characters": 2018
+    },
+    "tracks": [
+      {
+        "track_id": "Cristina Vane - So Easy",
+        "genre": "folk/blues",
+        "annotated_intervals": 10,
+        "emitted_words": 59,
+        "prediction_preview": "no i t o lai sfn o hst pg mhnc hie sp",
+        "wer": 1.0,
+        "cer": 0.8457831325301205,
+        "word_edits": 91,
+        "reference_words": 91,
+        "character_edits": 351,
+        "reference_characters": 415
+      },
+      {
+        "track_id": "Girls Under Glass - We Feel Alright",
+        "genre": "electronic",
+        "annotated_intervals": 5,
+        "emitted_words": 47,
+        "prediction_preview": "ssgtnttt et tec s sse u ehcesoerescoes oieya traast idkda i e",
+        "wer": 0.9705882352941176,
+        "cer": 0.8355263157894737,
+        "word_edits": 33,
+        "reference_words": 34,
+        "character_edits": 127,
+        "reference_characters": 152
+      },
+      {
+        "track_id": "Lyndsey Ollard - Catching Up",
+        "genre": "pop",
+        "annotated_intervals": 6,
+        "emitted_words": 35,
+        "prediction_preview": "ntsnk ol n asy n toskks'swnk s yynsyh'ne ahhk asolonelc s kpssiwswsoo",
+        "wer": 1.0,
+        "cer": 0.8701923076923077,
+        "word_edits": 43,
+        "reference_words": 43,
+        "character_edits": 181,
+        "reference_characters": 208
+      },
+      {
+        "track_id": "M.E.R.C. Music - Knockout",
+        "genre": "hip-hop",
+        "annotated_intervals": 6,
+        "emitted_words": 112,
+        "prediction_preview": "aou gt d ih eg tai iusostubceorta ttae as a bm'ste faa",
+        "wer": 0.9763313609467456,
+        "cer": 0.7903225806451613,
+        "word_edits": 165,
+        "reference_words": 169,
+        "character_edits": 637,
+        "reference_characters": 806
+      },
+      {
+        "track_id": "Nerve 9 - Pray For The Rain",
+        "genre": "rock",
+        "annotated_intervals": 9,
+        "emitted_words": 32,
+        "prediction_preview": "iygyy so ss r nttrsmlbovk meors ooowyt ttluro tn a ymu ot",
+        "wer": 0.9836065573770492,
+        "cer": 0.8149466192170819,
+        "word_edits": 60,
+        "reference_words": 61,
+        "character_edits": 229,
+        "reference_characters": 281
+      },
+      {
+        "track_id": "Side Effects Project - Sing With Me",
+        "genre": "hip-hop",
+        "annotated_intervals": 3,
+        "emitted_words": 168,
+        "prediction_preview": "tsdsghswwyonsae'ncts yf nu tanorrais s ieinahrti ascata ets ga sfow hokt'soiu'fockn ies",
+        "wer": 1.0,
+        "cer": 0.8205128205128205,
+        "word_edits": 34,
+        "reference_words": 34,
+        "character_edits": 128,
+        "reference_characters": 156
+      }
+    ]
+  }
+}
