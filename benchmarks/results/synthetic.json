@@ -1,0 +1,488 @@
+{
+  "songs": 3,
+  "conditions": {
+    "vocal": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e og tinight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "ee e o oin toghight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "e e i sidgay"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "se onght"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "we hear so ng song"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "s nogte"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "he t e thigh"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hehg e thighth"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "ee s g sonog"
+        }
+      ],
+      "wer": 1.1379310344827587,
+      "cer": 0.5238095238095238,
+      "word_edits": 33,
+      "reference_words": 29,
+      "character_edits": 66,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "original_mix": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e e tonight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "hee e me tight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "e sogy"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "seie nit"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "we e h he e mon g songt"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "we e e o nty"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "legh te sigh"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hea eith"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "e seag looi"
+        }
+      ],
+      "wer": 1.206896551724138,
+      "cer": 0.6031746031746031,
+      "word_edits": 35,
+      "reference_words": 29,
+      "character_edits": 76,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "mix_-12dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e o tonight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "ee e me toghitt"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "w e soday"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "se tonig"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "we h er he mong g son"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "swe o nog"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "leh te tigh"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hea hith"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "e seg soni"
+        }
+      ],
+      "wer": 1.1379310344827587,
+      "cer": 0.5714285714285714,
+      "word_edits": 33,
+      "reference_words": 29,
+      "character_edits": 72,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "mix_-6dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e tonight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "hee e me tight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "e sogy"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "se tonig"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "we e h er e mon g song"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "swe e o soy"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "legh te sigh"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hea it"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "e seag loi"
+        }
+      ],
+      "wer": 1.103448275862069,
+      "cer": 0.6031746031746031,
+      "word_edits": 32,
+      "reference_words": 29,
+      "character_edits": 76,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "mix_+0dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e e tonight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "ee e me tioht"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "e sog"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "seie nit"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "we e h he e mon g songt"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "we e e o nty"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "ohegh tle sig"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hea eith"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "ee seag looi"
+        }
+      ],
+      "wer": 1.206896551724138,
+      "cer": 0.6031746031746031,
+      "word_edits": 35,
+      "reference_words": 29,
+      "character_edits": 76,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "mix_+6dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "prediction": "e e o tonight"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "prediction": "eete meh toht"
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "prediction": "e so"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "see the light",
+          "prediction": "seie nit"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "we hear the song",
+          "prediction": "wee h h m n singt"
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "sing a high note",
+          "prediction": "sw e e o ntgtyn"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "hello sky",
+          "prediction": "the tle ih"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "hear me tonight",
+          "prediction": "hea eit"
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "we sing a song",
+          "prediction": "ee seag looo"
+        }
+      ],
+      "wer": 1.1379310344827587,
+      "cer": 0.5952380952380952,
+      "word_edits": 33,
+      "reference_words": 29,
+      "character_edits": 75,
+      "reference_characters": 126,
+      "instrumental_word_rate": null
+    },
+    "instrumental": {
+      "clips": 9,
+      "voiced_clips": 0,
+      "instrumental_clips": 9,
+      "instrumental_with_words": 0,
+      "samples": [
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-1",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "repeat-2",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-01",
+          "clip_id": "changed",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-1",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-2",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-02",
+          "clip_id": "line-3",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-1",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-2",
+          "reference": "",
+          "prediction": ""
+        },
+        {
+          "song_id": "test-03",
+          "clip_id": "line-3",
+          "reference": "",
+          "prediction": ""
+        }
+      ],
+      "wer": null,
+      "cer": null,
+      "word_edits": 0,
+      "reference_words": 0,
+      "character_edits": 0,
+      "reference_characters": 0,
+      "instrumental_word_rate": 0.0
+    }
+  }
+}

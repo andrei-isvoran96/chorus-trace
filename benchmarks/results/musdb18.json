@@ -1,0 +1,96 @@
+{
+  "songs": 3,
+  "conditions": {
+    "vocal": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 1.0512820512820513,
+      "cer": 0.8121546961325967,
+      "word_edits": 82,
+      "reference_words": 78,
+      "character_edits": 294,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "original_mix": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 0.9871794871794872,
+      "cer": 0.8784530386740331,
+      "word_edits": 77,
+      "reference_words": 78,
+      "character_edits": 318,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "mix_-12dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 1.0769230769230769,
+      "cer": 0.850828729281768,
+      "word_edits": 84,
+      "reference_words": 78,
+      "character_edits": 308,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "mix_-6dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 1.0512820512820513,
+      "cer": 0.861878453038674,
+      "word_edits": 82,
+      "reference_words": 78,
+      "character_edits": 312,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "mix_+0dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 0.9871794871794872,
+      "cer": 0.8729281767955801,
+      "word_edits": 77,
+      "reference_words": 78,
+      "character_edits": 316,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "mix_+6dB": {
+      "clips": 9,
+      "voiced_clips": 9,
+      "instrumental_clips": 0,
+      "instrumental_with_words": 0,
+      "wer": 1.0,
+      "cer": 0.8977900552486188,
+      "word_edits": 78,
+      "reference_words": 78,
+      "character_edits": 325,
+      "reference_characters": 362,
+      "instrumental_word_rate": null
+    },
+    "instrumental": {
+      "clips": 9,
+      "voiced_clips": 0,
+      "instrumental_clips": 9,
+      "instrumental_with_words": 5,
+      "wer": null,
+      "cer": null,
+      "word_edits": 0,
+      "reference_words": 0,
+      "character_edits": 0,
+      "reference_characters": 0,
+      "instrumental_word_rate": 0.5555555555555556
+    }
+  }
+}

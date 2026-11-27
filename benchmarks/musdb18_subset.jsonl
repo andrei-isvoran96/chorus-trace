@@ -1,0 +1,24 @@
+{"song_id": "Music Delta - Hendrix", "split": "train", "start": 0, "end": 4}
+{"song_id": "Music Delta - Hendrix", "split": "train", "start": 4, "end": 8}
+{"song_id": "Music Delta - Hendrix", "split": "train", "start": 8, "end": 12}
+{"song_id": "Actions - South Of The Water", "split": "train", "start": 0, "end": 8}
+{"song_id": "Actions - South Of The Water", "split": "train", "start": 8, "end": 15}
+{"song_id": "Actions - South Of The Water", "split": "train", "start": 15, "end": 19}
+{"song_id": "The So So Glos - Emergency", "split": "train", "start": 5, "end": 10}
+{"song_id": "The So So Glos - Emergency", "split": "train", "start": 11, "end": 15}
+{"song_id": "The So So Glos - Emergency", "split": "train", "start": 16, "end": 21}
+{"song_id": "Jay Menon - Through My Eyes", "split": "train", "start": 0, "end": 4}
+{"song_id": "Jay Menon - Through My Eyes", "split": "train", "start": 8, "end": 15}
+{"song_id": "Jay Menon - Through My Eyes", "split": "train", "start": 15, "end": 22}
+{"song_id": "The Scarlet Brand - Les Fleurs Du Mal", "split": "train", "start": 5, "end": 10}
+{"song_id": "The Scarlet Brand - Les Fleurs Du Mal", "split": "train", "start": 10, "end": 16}
+{"song_id": "The Scarlet Brand - Les Fleurs Du Mal", "split": "train", "start": 16, "end": 22}
+{"song_id": "Carlos Gonzalez - A Place For Us", "split": "test", "start": 0, "end": 5}
+{"song_id": "Carlos Gonzalez - A Place For Us", "split": "test", "start": 5, "end": 13}
+{"song_id": "Carlos Gonzalez - A Place For Us", "split": "test", "start": 24, "end": 29}
+{"song_id": "Angels In Amplifiers - I'm Alright", "split": "test", "start": 16, "end": 24}
+{"song_id": "Angels In Amplifiers - I'm Alright", "split": "test", "start": 24, "end": 30}
+{"song_id": "Angels In Amplifiers - I'm Alright", "split": "test", "start": 30, "end": 35}
+{"song_id": "Nerve 9 - Pray For The Rain", "split": "test", "start": 17, "end": 25}
+{"song_id": "Nerve 9 - Pray For The Rain", "split": "test", "start": 25, "end": 32}
+{"song_id": "Nerve 9 - Pray For The Rain", "split": "test", "start": 32, "end": 38}

@@ -1,0 +1,145 @@
+{
+  "condition": "original_mix",
+  "pairs": [
+    {
+      "song_id": "Speak Softly - Broken Man",
+      "kind": "same_lyric",
+      "takes": [
+        {
+          "clip_id": "chorus-repeat-1",
+          "independent": {
+            "prediction": "lslms lseese ess",
+            "wer": 1.0,
+            "cer": 0.8275862068965517,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 24,
+            "reference_characters": 29
+          },
+          "pooled": {
+            "prediction": "lesls lseese esls s",
+            "wer": 1.0,
+            "cer": 0.8275862068965517,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 24,
+            "reference_characters": 29
+          }
+        },
+        {
+          "clip_id": "chorus-repeat-2",
+          "independent": {
+            "prediction": "esl lmlilioseese esls s s",
+            "wer": 1.0,
+            "cer": 0.8275862068965517,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 24,
+            "reference_characters": 29
+          },
+          "pooled": {
+            "prediction": "lesls lseese ess s",
+            "wer": 1.0,
+            "cer": 0.8275862068965517,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 24,
+            "reference_characters": 29
+          }
+        }
+      ]
+    },
+    {
+      "song_id": "Speak Softly - Broken Man",
+      "kind": "changed_lyric",
+      "takes": [
+        {
+          "clip_id": "chorus-repeat-1",
+          "independent": {
+            "prediction": "lslms lseese ess",
+            "wer": 1.0,
+            "cer": 0.8275862068965517,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 24,
+            "reference_characters": 29
+          },
+          "pooled": {
+            "prediction": "sls sl ee e es e",
+            "wer": 1.0,
+            "cer": 0.7241379310344828,
+            "word_edits": 6,
+            "reference_words": 6,
+            "character_edits": 21,
+            "reference_characters": 29
+          }
+        },
+        {
+          "clip_id": "chorus-changed",
+          "independent": {
+            "prediction": "e s i s e erer ee lse e",
+            "wer": 1.8,
+            "cer": 0.8,
+            "word_edits": 9,
+            "reference_words": 5,
+            "character_edits": 20,
+            "reference_characters": 25
+          },
+          "pooled": {
+            "prediction": "sls s e es e",
+            "wer": 1.0,
+            "cer": 0.72,
+            "word_edits": 5,
+            "reference_words": 5,
+            "character_edits": 18,
+            "reference_characters": 25
+          }
+        }
+      ],
+      "changed_lyric": "and",
+      "changed_lyric_clip": "chorus-repeat-1",
+      "independent_has_changed_lyric": false,
+      "pooled_has_changed_lyric": false,
+      "erased_changed_lyric": false,
+      "introduced_in_other_take": false
+    }
+  ],
+  "by_pair_type": {
+    "same_lyric": {
+      "independent": {
+        "wer": 1.0,
+        "cer": 0.8275862068965517,
+        "word_edits": 12,
+        "reference_words": 12,
+        "character_edits": 48,
+        "reference_characters": 58
+      },
+      "pooled": {
+        "wer": 1.0,
+        "cer": 0.8275862068965517,
+        "word_edits": 12,
+        "reference_words": 12,
+        "character_edits": 48,
+        "reference_characters": 58
+      }
+    },
+    "changed_lyric": {
+      "independent": {
+        "wer": 1.3636363636363635,
+        "cer": 0.8148148148148148,
+        "word_edits": 15,
+        "reference_words": 11,
+        "character_edits": 44,
+        "reference_characters": 54
+      },
+      "pooled": {
+        "wer": 1.0,
+        "cer": 0.7222222222222222,
+        "word_edits": 11,
+        "reference_words": 11,
+        "character_edits": 39,
+        "reference_characters": 54
+      }
+    }
+  }
+}

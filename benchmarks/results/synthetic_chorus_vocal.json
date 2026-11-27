@@ -1,0 +1,149 @@
+{
+  "condition": "vocal",
+  "pairs": [
+    {
+      "song_id": "test-01",
+      "kind": "same_lyric",
+      "takes": [
+        {
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "independent": {
+            "prediction": "e e og tinight",
+            "wer": 1.3333333333333333,
+            "cer": 0.3333333333333333,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 5,
+            "reference_characters": 15
+          },
+          "pooled": {
+            "prediction": "ee e og tinight",
+            "wer": 1.3333333333333333,
+            "cer": 0.3333333333333333,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 5,
+            "reference_characters": 15
+          }
+        },
+        {
+          "clip_id": "repeat-2",
+          "reference": "we sing tonight",
+          "independent": {
+            "prediction": "ee e o oin toghight",
+            "wer": 1.6666666666666667,
+            "cer": 0.6,
+            "word_edits": 5,
+            "reference_words": 3,
+            "character_edits": 9,
+            "reference_characters": 15
+          },
+          "pooled": {
+            "prediction": "ee e og tighight",
+            "wer": 1.3333333333333333,
+            "cer": 0.4666666666666667,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 7,
+            "reference_characters": 15
+          }
+        }
+      ]
+    },
+    {
+      "song_id": "test-01",
+      "kind": "changed_lyric",
+      "takes": [
+        {
+          "clip_id": "repeat-1",
+          "reference": "we sing tonight",
+          "independent": {
+            "prediction": "e e og tinight",
+            "wer": 1.3333333333333333,
+            "cer": 0.3333333333333333,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 5,
+            "reference_characters": 15
+          },
+          "pooled": {
+            "prediction": "e e i tinight",
+            "wer": 1.3333333333333333,
+            "cer": 0.4,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 6,
+            "reference_characters": 15
+          }
+        },
+        {
+          "clip_id": "changed",
+          "reference": "we sing today",
+          "independent": {
+            "prediction": "e e i sidgay",
+            "wer": 1.3333333333333333,
+            "cer": 0.6153846153846154,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 8,
+            "reference_characters": 13
+          },
+          "pooled": {
+            "prediction": "e e i tinigh",
+            "wer": 1.3333333333333333,
+            "cer": 0.7692307692307693,
+            "word_edits": 4,
+            "reference_words": 3,
+            "character_edits": 10,
+            "reference_characters": 13
+          }
+        }
+      ],
+      "changed_lyric": "today",
+      "changed_lyric_clip": "changed",
+      "independent_has_changed_lyric": false,
+      "pooled_has_changed_lyric": false,
+      "erased_changed_lyric": false,
+      "introduced_in_other_take": false
+    }
+  ],
+  "by_pair_type": {
+    "same_lyric": {
+      "independent": {
+        "wer": 1.5,
+        "cer": 0.4666666666666667,
+        "word_edits": 9,
+        "reference_words": 6,
+        "character_edits": 14,
+        "reference_characters": 30
+      },
+      "pooled": {
+        "wer": 1.3333333333333333,
+        "cer": 0.4,
+        "word_edits": 8,
+        "reference_words": 6,
+        "character_edits": 12,
+        "reference_characters": 30
+      }
+    },
+    "changed_lyric": {
+      "independent": {
+        "wer": 1.3333333333333333,
+        "cer": 0.4642857142857143,
+        "word_edits": 8,
+        "reference_words": 6,
+        "character_edits": 13,
+        "reference_characters": 28
+      },
+      "pooled": {
+        "wer": 1.3333333333333333,
+        "cer": 0.5714285714285714,
+        "word_edits": 8,
+        "reference_words": 6,
+        "character_edits": 16,
+        "reference_characters": 28
+      }
+    }
+  }
+}
