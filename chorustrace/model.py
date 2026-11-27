@@ -4,26 +4,31 @@ import numpy as np
 
 from .ctc import ctc_loss
 
-_DILATIONS = (1, 3, 9)
+_MODEL_DILATIONS = {"baseline": (1, 3, 9), "long-context": (1, 3, 9, 27)}
+MODEL_ARCHITECTURES = tuple(_MODEL_DILATIONS)
 _RESIDUAL_SCALE = 0.5
 
 
 class AcousticModel:
     """Map a sequence of log-mel frames to one vector of CTC logits per frame."""
 
-    def __init__(self, n_features, n_classes, hidden_size=48, seed=0):
+    def __init__(self, n_features, n_classes, hidden_size=48, seed=0, *, architecture="baseline"):
         if n_features < 1 or n_classes < 2 or hidden_size < 1:
             raise ValueError("expected positive feature and hidden sizes and at least two classes")
+        if architecture not in MODEL_ARCHITECTURES:
+            raise ValueError(f"unknown acoustic architecture: {architecture!r}")
         self.n_features = n_features
         self.n_classes = n_classes
         self.hidden_size = hidden_size
+        self.architecture = architecture
+        self._dilations = _MODEL_DILATIONS[architecture]
         self.parameters: dict[str, np.ndarray] = {}
         rng = np.random.default_rng(seed)
 
         layer_sizes = [("input", n_features, hidden_size)]
         layer_sizes += [
             (f"context_{dilation}", 3 * hidden_size, hidden_size)
-            for dilation in _DILATIONS
+            for dilation in self._dilations
         ]
         layer_sizes.append(("output", hidden_size, n_classes))
         for name, fan_in, fan_out in layer_sizes:
@@ -44,7 +49,7 @@ class AcousticModel:
         hidden = projected
         blocks = []
         width = self.hidden_size
-        for dilation in _DILATIONS:
+        for dilation in self._dilations:
             name = f"context_{dilation}"
             context = np.zeros((len(hidden), 3 * width))
             context[dilation:, :width] = hidden[:-dilation]
@@ -68,7 +73,7 @@ class AcousticModel:
         hidden_gradient = logit_gradient @ params["output_weight"].T
         width = self.hidden_size
 
-        for dilation, (context, activation) in zip(reversed(_DILATIONS), reversed(blocks)):
+        for dilation, (context, activation) in zip(reversed(self._dilations), reversed(blocks)):
             name = f"context_{dilation}"
             activation_gradient = _RESIDUAL_SCALE * hidden_gradient * (1 - activation**2)
             gradients[f"{name}_weight"] = context.T @ activation_gradient

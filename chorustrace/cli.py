@@ -7,10 +7,19 @@ import wave
 import zipfile
 from pathlib import Path
 
+from .abstention import load_threshold
 from .audio import FeatureConfig
 from .chorus import evaluate_choruses
-from .data import SPLITS, read_jsonl, read_manifest, select_split, write_jsonl
+from .data import (
+    SPLITS,
+    file_sha256,
+    read_jsonl,
+    read_manifest,
+    select_split,
+    write_jsonl,
+)
 from .evaluation import evaluate
+from .model import MODEL_ARCHITECTURES
 from .musdb import prepare_musdb18
 from .prepare import DEFAULT_LEVELS, prepare_benchmark
 from .recognizer import Recognizer, TrainingConfig, train
@@ -56,10 +65,12 @@ def _parser() -> argparse.ArgumentParser:
     fit.add_argument("--hidden-size", type=int, default=48)
     fit.add_argument("--hop-size", type=int, default=160, help="feature hop in 16 kHz samples")
     fit.add_argument("--seed", type=int, default=0)
+    fit.add_argument("--architecture", choices=MODEL_ARCHITECTURES, default="baseline")
 
     decode = commands.add_parser("transcribe", help="print a greedy transcript of one WAV")
     decode.add_argument("checkpoint", type=Path)
     decode.add_argument("wav", type=Path)
+    decode.add_argument("--abstention", type=Path, help="apply a checkpoint-specific calibration JSON")
 
     score = commands.add_parser("evaluate", help="report WER, CER, and instrumental false alarms as JSON")
     score.add_argument("checkpoint", type=Path)
@@ -67,6 +78,7 @@ def _parser() -> argparse.ArgumentParser:
     _split_argument(score, "test")
     score.add_argument("--held-out", action="store_true", help="check song IDs against checkpoint training IDs")
     score.add_argument("--samples", type=int, default=3, help="sample predictions per condition")
+    score.add_argument("--abstention", type=Path, help="apply a checkpoint-specific calibration JSON")
 
     chorus = commands.add_parser("chorus", help="score independent vs pooled marked chorus takes as JSON")
     chorus.add_argument("checkpoint", type=Path)
@@ -105,7 +117,7 @@ def _run(args: argparse.Namespace) -> None:
         print(prepare_musdb18(args.audio, args.lyrics, args.selection, args.output,
                               levels=args.levels, mix_only=args.mix_only))
     elif args.command == "transcribe":
-        print(Recognizer.load(args.checkpoint).transcribe(args.wav))
+        print(Recognizer.load(args.checkpoint).transcribe(args.wav, threshold=_threshold(args)))
     else:
         examples = select_split(read_manifest(args.manifest), args.split)
         if args.command == "train":
@@ -115,10 +127,16 @@ def _run(args: argparse.Namespace) -> None:
             if args.held_out:
                 recognizer.check_held_out(examples)
             if args.command == "evaluate":
-                report = evaluate(recognizer, examples, args.samples)
+                report = evaluate(recognizer, examples, args.samples, threshold=_threshold(args))
             else:
                 report = evaluate_choruses(recognizer, examples, args.pairs, args.condition)
             print(json.dumps(report, indent=2))
+
+
+def _threshold(args: argparse.Namespace) -> float | None:
+    if args.abstention is None:
+        return None
+    return load_threshold(args.abstention, args.checkpoint)
 
 
 def _train(args: argparse.Namespace, examples: list) -> None:
@@ -128,7 +146,7 @@ def _train(args: argparse.Namespace, examples: list) -> None:
             raise ValueError(f"training split lacks conditions: {', '.join(sorted(missing))}")
         examples = [example for example in examples if example.condition in args.condition]
     config = TrainingConfig(args.epochs, args.learning_rate, args.hidden_size, args.seed,
-                            FeatureConfig(hop_size=args.hop_size))
+                            FeatureConfig(hop_size=args.hop_size), architecture=args.architecture)
     songs = len({example.song_id for example in examples})
     print(f"training on {len(examples)} clips from {songs} songs", file=sys.stderr, flush=True)
 
@@ -136,7 +154,8 @@ def _train(args: argparse.Namespace, examples: list) -> None:
         if epoch == 1 or epoch == config.epochs or epoch % 5 == 0:
             print(f"epoch {epoch}/{config.epochs}  CTC loss/frame {loss:.5f}", file=sys.stderr, flush=True)
 
-    train(examples, config, progress=progress).save(args.checkpoint)
+    manifest_sha256 = file_sha256(args.manifest)
+    train(examples, config, progress=progress, training_manifest_sha256=manifest_sha256).save(args.checkpoint)
     print(args.checkpoint)
 
 

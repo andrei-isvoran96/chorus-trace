@@ -45,14 +45,16 @@ class ErrorCounts:
         }
 
 
-def evaluate(recognizer: Recognizer, examples: Sequence[Example], samples: int = 3) -> dict:
+def evaluate(recognizer: Recognizer, examples: Sequence[Example], samples: int = 3, *,
+             threshold: float | None = None) -> dict:
     """Return micro-averaged error rates per condition and counts for empty references."""
     if samples < 0:
         raise ValueError("sample count must be nonnegative")
     sections = {}
     errors = defaultdict(ErrorCounts)
     for example in examples:
-        prediction = recognizer.transcribe(example.audio)
+        prediction = (recognizer.transcribe(example.audio) if threshold is None
+                      else recognizer.transcribe(example.audio, threshold=threshold))
         reference = normalize_text(example.text)
         section = sections.setdefault(example.condition, {
             "clips": 0, "voiced_clips": 0, "instrumental_clips": 0,

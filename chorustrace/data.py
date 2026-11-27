@@ -1,5 +1,6 @@
 """Lyric normalization and song-grouped JSONL manifests."""
 
+import hashlib
 import json
 import os
 import re
@@ -36,6 +37,15 @@ class Example:
     split: str | None = None
     condition: str = "audio"
     clip_id: str | None = None
+    artist: str | None = None
+
+
+def file_sha256(path: str | Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as file:
+        for chunk in iter(lambda: file.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def read_jsonl(path: Path):
@@ -108,6 +118,7 @@ def read_manifest(path: str | Path) -> list[Example]:
             split=split,
             condition=string_field(row, "condition", location) if "condition" in row else "audio",
             clip_id=string_field(row, "clip_id", location) if "clip_id" in row else None,
+            artist=string_field(row, "artist", location) if "artist" in row else None,
         ))
     if not examples:
         raise ValueError(f"{path}: manifest is empty")

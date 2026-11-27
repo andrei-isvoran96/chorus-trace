@@ -80,9 +80,30 @@ class PipelineTests(unittest.TestCase):
             restored = Recognizer.load(checkpoint)
             self.assertEqual(clip.text, "hello moon")
             self.assertEqual(restored.transcribe(clip.audio), clip.text)
+            self.assertEqual(restored.transcribe(clip.audio, threshold=0), clip.text)
+            self.assertEqual(restored.transcribe(clip.audio, threshold=1), "")
             np.testing.assert_array_equal(restored.posteriors(clip.audio), recognizer.posteriors(clip.audio))
             with self.assertRaisesRegex(ValueError, "overlap training"):
                 restored.check_held_out([clip])
+
+    def test_long_context_checkpoint_retains_training_provenance(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            sources = make_synthetic_sources(root)
+            source = json.loads(sources.read_text(encoding="utf-8").splitlines()[0])
+            clip = Example(root / source["vocal"], source["text"], source["song_id"], artist="lead")
+            recognizer = train([clip], TrainingConfig(epochs=1, hidden_size=8, architecture="long-context"),
+                               training_manifest_sha256="a" * 64)
+            checkpoint = root / "checkpoint.npz"
+            recognizer.save(checkpoint)
+            restored = Recognizer.load(checkpoint)
+            self.assertEqual(restored.model.architecture, "long-context")
+            self.assertEqual(restored.training_artist_ids, ("lead",))
+            self.assertEqual(restored.training_manifest_sha256, "a" * 64)
+            np.testing.assert_array_equal(restored.posteriors(clip.audio), recognizer.posteriors(clip.audio))
+            different_song = Example(clip.audio, clip.text, "other", artist="lead")
+            with self.assertRaisesRegex(ValueError, "artists overlap training"):
+                restored.check_held_out([different_song])
 
     def test_micro_averages_and_empty_references(self):
         class FakeRecognizer:

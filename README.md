@@ -1,6 +1,6 @@
 # ChorusTrace
 
-ChorusTrace trains a local recognizer for short English singing clips. It reads integer PCM WAV, extracts NumPy log-mel features, and fits a small dilated temporal network with handwritten backpropagation, character CTC, and Adam. Greedy decoding uses the learned frame scores. Training starts from random weights. Transcription needs a WAV and a saved checkpoint and runs offline.
+ChorusTrace trains a local recognizer for short English singing clips with one lead vocal. It reads integer PCM WAV, extracts NumPy log-mel features, and fits a small dilated temporal network with handwritten backpropagation, character CTC, and Adam. Greedy decoding uses the learned frame scores. Training starts from random weights. Transcription needs a WAV and a saved checkpoint and runs offline.
 
 ## Install and use
 
@@ -24,6 +24,14 @@ chorustrace train train.jsonl runs/model.npz --epochs 30 --seed 0
 chorustrace transcribe runs/model.npz wav/clip.wav
 chorustrace evaluate runs/model.npz test.jsonl --held-out
 ```
+
+Save an editable draft with `chorustrace transcribe runs/model.npz wav/clip.wav > draft.txt`.
+Train the longer-context model with `--architecture long-context`. If you have a
+calibration JSON for that exact checkpoint, pass `--abstention calibration.json`
+to return an empty draft when lyric confidence is at or below its threshold.
+
+See the [benchmark report](benchmarks/english_lead_benchmark.md) for rights-reviewed
+data preparation, artist-disjoint splits, and reproduction commands.
 
 ```python
 from chorustrace import Recognizer, TrainingConfig, read_manifest, train
