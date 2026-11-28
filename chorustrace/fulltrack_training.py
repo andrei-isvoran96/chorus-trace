@@ -3,6 +3,7 @@
 import math
 import tempfile
 import wave
+from collections import Counter
 from collections.abc import Callable, Sequence
 from dataclasses import asdict
 from pathlib import Path
@@ -175,10 +176,19 @@ def train_full_tracks(
                 return epoch["validation"]["wer"], epoch["validation"]["cer"]
 
             best_epoch = min(scored, key=key)
+            prepared_seconds, labeled_seconds = Counter(), Counter()
+            for example in examples:
+                with wave.open(str(example.audio), "rb") as source:
+                    seconds = source.getnframes() / source.getframerate()
+                prepared_seconds[example.condition] += seconds
+                if example.text:
+                    labeled_seconds[example.condition] += seconds
             learning_curve.append({
                 "training_groups": size,
                 "training_tracks": len(selected),
                 "training_audio_seconds": sum(track.duration_seconds for track in selected),
+                "prepared_audio_seconds_by_condition": dict(prepared_seconds),
+                "labeled_audio_seconds_by_condition": dict(labeled_seconds),
                 "training_clips": len(examples),
                 "best_epoch": best_epoch["epoch"],
                 "epochs": history,

@@ -4,7 +4,7 @@ from bisect import bisect_left
 from collections import Counter
 from collections.abc import Sequence
 from dataclasses import dataclass
-from math import isfinite
+from math import inf, isfinite
 from typing import TYPE_CHECKING
 
 from .data import normalize_text
@@ -12,7 +12,7 @@ from .evaluation import edit_distance
 
 if TYPE_CHECKING:
     from .fulltrack_data import FullTrack
-    from .fulltrack_decode import FullTrackTranscript
+    from .fulltrack_decode import FullTrackTranscript, TimedWord
     from .recognizer import Recognizer
 
 
@@ -41,26 +41,31 @@ class _Edit:
 def _align_words(
     reference: list[str], prediction: list[str],
     reference_times: list[float] | None = None, prediction_times: list[float] | None = None,
+    *,
+    instrumental_insertions: frozenset[int] = frozenset(),
 ) -> list[_Edit]:
-    """Minimize edit count, then total midpoint distance among paired words."""
+    """Minimize edit count and paired-word distance while counting instrumental insertions."""
     if reference_times is None:
         reference_times = [0.0] * len(reference)
     if prediction_times is None:
         prediction_times = [0.0] * len(prediction)
-    observations = tuple(zip(prediction, prediction_times, strict=True))
+    observations = tuple(
+        (word, time, index in instrumental_insertions)
+        for index, (word, time) in enumerate(zip(prediction, prediction_times, strict=True))
+    )
     expected_words = zip(reference, reference_times, strict=True)
     previous = [(column, 0.0) for column in range(len(prediction) + 1)]
     trace = [bytearray([_INSERTION]) * len(previous)]
     for row, (expected, expected_time) in enumerate(expected_words, start=1):
         current = [(row, 0.0)]
         back = bytearray([_DELETION])
-        for column, (actual, actual_time) in enumerate(observations, start=1):
+        for column, (actual, actual_time, instrumental) in enumerate(observations, start=1):
             different = expected != actual
             diagonal, diagonal_offset = previous[column - 1]
             deletion, deletion_offset = previous[column]
             insertion, insertion_offset = current[-1]
             cost, offset, direction = min(
-                (diagonal + different, diagonal_offset + abs(expected_time - actual_time),
+                (inf if instrumental else diagonal + different, diagonal_offset + abs(expected_time - actual_time),
                  _SUBSTITUTION if different else _MATCH),
                 (deletion + 1, deletion_offset, _DELETION),
                 (insertion + 1, insertion_offset, _INSERTION),
@@ -108,6 +113,17 @@ def _prediction_times(result: "FullTrackTranscript", words: list[str]) -> list[f
     if [span.text for span in result.words] != words:
         raise ValueError("decoded word timings do not match transcript text")
     return [(span.start_seconds + span.end_seconds) / 2 for span in result.words]
+
+
+def _instrumental_insertions(
+    intervals: Sequence[tuple[float, float]], words: Sequence["TimedWord"],
+) -> frozenset[int]:
+    if not intervals:
+        return frozenset()
+    return frozenset(
+        index for index, word in enumerate(words)
+        if any(start <= word.start_seconds < word.end_seconds <= end for start, end in intervals)
+    )
 
 
 def _instrumental(intervals: Sequence[tuple[float, float]], words: list[float]) -> dict:
@@ -200,8 +216,13 @@ def evaluate_full_tracks(
         reference = normalize_text(track.text)
         reference_words = reference.split()
         reference_times = [(span.start + span.end) / 2 for span in track.words] if track.words else None
-        edits = _align_words(reference_words, prediction_words, reference_times,
-                             prediction_times if reference_times is not None else None)
+        intervals = track.instrumental_intervals or ()
+        instrumental_insertions = _instrumental_insertions(intervals, result.words)
+        edits = _align_words(
+            reference_words, prediction_words, reference_times,
+            prediction_times if reference_times is not None else None,
+            instrumental_insertions=instrumental_insertions,
+        )
         row = _error_rates(_edit_counts(edits) | {
             "reference_words": len(reference_words),
             "reference_characters": len(reference),
@@ -225,10 +246,14 @@ def evaluate_full_tracks(
             control_words = normalize_text(control.text).split()
             control_times = _prediction_times(control, control_words)
             identical = prediction_words == control_words
-            # Identical transcripts have identical lexical edits even if word timings drift.
-            control_edits = edits if identical else _align_words(
-                reference_words, control_words, reference_times, control_times if reference_times is not None else None,
-            )
+            control_insertions = _instrumental_insertions(intervals, control.words)
+            control_edits = edits
+            if not identical or instrumental_insertions != control_insertions:
+                control_edits = _align_words(
+                    reference_words, control_words, reference_times,
+                    control_times if reference_times is not None else None,
+                    instrumental_insertions=control_insertions,
+                )
             segmented_signatures = _edit_signatures(edits, prediction_words)
             control_signatures = _edit_signatures(control_edits, control_words)
             comparison = dict.fromkeys(_PAIRED_NEAR_COUNTS) | {
